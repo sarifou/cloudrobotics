@@ -1,0 +1,93 @@
+h1. OCCI Train extension
+
+
+
+| *Name* | Train |
+| *Scheme* | http://cristal.org/omcri4cp/train# |
+
+
+Imported OCCI Extensions:
+
+| *Name* | *Scheme* |
+| <a href="core.textile">core</a> | http://schemas.ogf.org/occi/core# |
+| <a href="omcricore.textile">omcricore</a> | http://occiware.org/cloudrobotics/core# |
+
+h1. Kinds
+
+h2. Kind train
+
+| *Term* | train |
+| *Scheme* | http://cristal.org/omcri4cp/train# |
+| *Title* |  |
+| *Parent* | <a href="omcricore.textile#kind-robot">http://occiware.org/cloudrobotics/core#robot</a> |
+
+Attributes of train are:
+
+| *Attribute* | *Type* | *Required* | *Mutable* | *Default* | *Description* |
+| user | <a href="core.textile#-string">String</a> | true | true |  |  |
+| ipAddress | <a href="core.textile#-string">String</a> | true | true |  |  |
+| trainAddress | <a href="core.textile#-integer">Integer</a> | true | true |  |  |
+| port | <a href="core.textile#-integer">Integer</a> | true | true |  |  |
+
+
+
+h1. Mixins
+
+h2. Mixin motion
+
+| *Term* | motion |
+| *Scheme* | http://cristal.org/omcri4cp/train# |
+| *Title* |  |
+Applies to:
+* <a href="Train.textile#kind-train">http://cristal.org/omcri4cp/train#train</a>
+
+Attributes of motion are:
+
+| *Attribute* | *Type* | *Required* | *Mutable* | *Default* | *Description* |
+| speed | <a href="core.textile#-integer">Integer</a> | true | true |  |  |
+
+Actions of motion are:
+
+| *Term* | *Scheme* | *Attributes* | *Title* |
+| faster | http://cristal.org/omcri4cp/train/motion/action# |  |  |
+| slower | http://cristal.org/omcri4cp/train/motion/action# |  |  |
+| reverse | http://cristal.org/omcri4cp/train/motion/action# |  |  |
+| stop | http://cristal.org/omcri4cp/train/motion/action# |  |  |
+| setspeed | http://cristal.org/omcri4cp/train/motion/action# |  |  |
+
+
+h2. Mixin accessories
+
+| *Term* | accessories |
+| *Scheme* | http://cristal.org/omcri4cp/train# |
+| *Title* |  |
+Applies to:
+* <a href="Train.textile#kind-train">http://cristal.org/omcri4cp/train#train</a>
+
+Attributes of accessories are:
+
+| *Attribute* | *Type* | *Required* | *Mutable* | *Default* | *Description* |
+| klaxon | <a href="Train.textile#-state">State</a> | false | true | OFF |  |
+| light | <a href="Train.textile#-state">State</a> | false | true | OFF |  |
+| trainNoise | <a href="Train.textile#-state">State</a> | false | true | OFF |  |
+| wagonNoise | <a href="Train.textile#-state">State</a> | false | true | OFF |  |
+
+Actions of accessories are:
+
+| *Term* | *Scheme* | *Attributes* | *Title* |
+| setklaxon | http://cristal.org/omcri4cp/train/accessories/action# |  |  |
+| setlight | http://cristal.org/omcri4cp/train/accessories/action# |  |  |
+| settrainnoise | http://cristal.org/omcri4cp/train/accessories/action# |  |  |
+| setwagonnoise | http://cristal.org/omcri4cp/train/accessories/action# |  |  |
+
+
+
+h1. Types
+
+h2. EnumerationType State
+
+**Literals**:
+* ON  
+* OFF  
+
+Generated at Thu Apr 29 23:47:41 CEST 2021 from platform:/resource/omcri4cp.train/model/train.occie by org.eclipse.cmf.occi.core.gen.textile

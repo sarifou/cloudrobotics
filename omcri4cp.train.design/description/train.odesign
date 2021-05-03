@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="Train" version="10.0.0.201505222000">
+  <ownedViewpoints name="TrainConfiguration" label="omcri4cp.train Configuration">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="TrainConfiguration Diagram" domainClass="Configuration">
+	  <metamodel href="http://cristal.org/omcri4cp/train/ecore#/"/>
+      <defaultLayer name="Default">
+		        <edgeMappings name="TrainLinksEdge" 
+		sourceMapping="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='TrainContainer'] 
+		" 
+		targetMapping=" 
+		" 
+		targetFinderExpression="feature:links">
+		          <style sizeComputationExpression="2">
+		            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+		            <centerLabelStyleDescription>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		            </centerLabelStyleDescription>
+		          </style>
+		        </edgeMappings>
+		        <containerMappings name="TrainContainer" 
+				preconditionExpression="[self.oclIsTypeOf(train::Train) 
+		/]"
+		            labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditEntityTitle']"
+					semanticCandidatesExpression="feature:resources" 
+					domainClass="train::Train"  
+		childrenPresentation="VerticalStack"
+		>
+		<subContainerMappings name="SubTrainContainer" semanticCandidatesExpression="[self/]" domainClass="train::Train" childrenPresentation="List">
+		          <subNodeMappings name="TrainId"
+		                labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditTrainId']"
+		                semanticCandidatesExpression="[self/]" domainClass="train::Train">
+		            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['id = ' + self.id.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            </style>
+		          </subNodeMappings>
+		          <subNodeMappings name="TrainTitle"
+		                labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditTrainTitle']"
+		                semanticCandidatesExpression="[self/]" domainClass="train::Train">
+		            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['title = ' + self.title.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            </style>
+		          </subNodeMappings>
+		          <subNodeMappings name="TrainLocation"
+		                labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditTrainLocation']"
+		                semanticCandidatesExpression="[self/]" domainClass="train::Train">
+		            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['location = ' + self.location.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            </style>
+		          </subNodeMappings>
+		          <subNodeMappings name="TrainSummary"
+		                labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditTrainSummary']"
+		                semanticCandidatesExpression="[self/]" domainClass="train::Train">
+		            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['summary = ' + self.summary.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            </style>
+		          </subNodeMappings>
+		          <subNodeMappings name="TrainUser"
+		                labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditTrainUser']"
+		                semanticCandidatesExpression="[self/]" domainClass="train::Train">
+		            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['user = ' + self.user.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            </style>
+		          </subNodeMappings>
+		          <subNodeMappings name="TrainIpAddress"
+		                labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditTrainIpAddress']"
+		                semanticCandidatesExpression="[self/]" domainClass="train::Train">
+		            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['ipAddress = ' + self.ipAddress.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            </style>
+		          </subNodeMappings>
+		          <subNodeMappings name="TrainTrainAddress"
+		                labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditTrainTrainAddress']"
+		                semanticCandidatesExpression="[self/]" domainClass="train::Train">
+		            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['trainAddress = ' + self.trainAddress.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            </style>
+		          </subNodeMappings>
+		          <subNodeMappings name="TrainPort"
+		                labelDirectEdit="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='EditTrainPort']"
+		                semanticCandidatesExpression="[self/]" domainClass="train::Train">
+		            <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['port = ' + self.port.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            </style>
+		          </subNodeMappings>
+					<style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[self.kind.name/]">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+		            </style>
+		</subContainerMappings>
+			<subContainerMappings name="AccessoriesMixin" preconditionExpression="[self.oclIsTypeOf(train::Accessories)/]" semanticCandidatesExpression="feature:parts" domainClass="train::Accessories" childrenPresentation="List">
+			<subNodeMappings name="Accessoriesklaxon" semanticCandidatesExpression="[self/]" domainClass="train::Accessories">
+			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['klaxon = ' + self.klaxon.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+			                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              </style>
+			            </subNodeMappings>
+			<subNodeMappings name="Accessorieslight" semanticCandidatesExpression="[self/]" domainClass="train::Accessories">
+			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['light = ' + self.light.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+			                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              </style>
+			            </subNodeMappings>
+			<subNodeMappings name="AccessoriestrainNoise" semanticCandidatesExpression="[self/]" domainClass="train::Accessories">
+			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['trainNoise = ' + self.trainNoise.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+			                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              </style>
+			            </subNodeMappings>
+			<subNodeMappings name="AccessorieswagonNoise" semanticCandidatesExpression="[self/]" domainClass="train::Accessories">
+			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['wagonNoise = ' + self.wagonNoise.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+			                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              </style>
+			            </subNodeMappings>
+			<style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[self.mixin.name/]">
+			              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+			            </style>
+			          </subContainerMappings>
+			<subContainerMappings name="MotionMixin" preconditionExpression="[self.oclIsTypeOf(train::Motion)/]" semanticCandidatesExpression="feature:parts" domainClass="train::Motion" childrenPresentation="List">
+			<subNodeMappings name="Motionspeed" semanticCandidatesExpression="[self/]" domainClass="train::Motion">
+			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['speed = ' + self.speed.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+			                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              </style>
+			            </subNodeMappings>
+			<style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[self.mixin.name/]">
+			              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+			            </style>
+			          </subContainerMappings>
+		          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[self.title + ': Train'/]" roundedCorner="true">
+		            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+		          </style> 
+		
+		
+					<style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[self.kind.name/]">
+		              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+		              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+		              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+		            </style>
+		        </containerMappings>
+<toolSections name="Train resources">
+		<ownedTools xsi:type="tool:ContainerCreationDescription" 
+					name="Create Train"
+					containerMappings="//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='TrainContainer'] 
+		"> 
+		            <variable name="container"/>
+		            <viewVariable name="containerView"/>
+		            <initialOperation>
+		              <firstModelOperations xsi:type="tool_1:Switch">
+		                <cases conditionExpression="aql:container.oclIsKindOf(occi::Configuration)">
+		                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="train::Train" referenceName="resources">
+		                    <subModelOperations xsi:type="tool_1:SetValue" featureName="title" valueExpression="['train' + container.oclAsType(Configuration).resources->size().toString()/]"/>
+		                  </subModelOperations>
+		                </cases>
+		                <default/>
+		              </firstModelOperations>
+		            </initialOperation>
+		          </ownedTools>
+</toolSections>
+<toolSections name="Train links">
+</toolSections>   
+<toolSections name="Train mixins">
+	          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Motion" containerMappings="
+	//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='TrainContainer']/@subContainerMappings[name='MotionMixin']
+	">
+	            <variable name="container"/>
+	            <viewVariable name="containerView"/>
+	            <initialOperation>
+	              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+	                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="train::Motion" referenceName="parts"/>
+	              </firstModelOperations>
+	            </initialOperation>
+	          </ownedTools>
+	          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Accessories" containerMappings="
+	//@ownedViewpoints[name='TrainConfiguration']/@ownedRepresentations[name='TrainConfiguration%20Diagram']/@defaultLayer/@containerMappings[name='TrainContainer']/@subContainerMappings[name='AccessoriesMixin']
+	">
+	            <variable name="container"/>
+	            <viewVariable name="containerView"/>
+	            <initialOperation>
+	              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+	                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="train::Accessories" referenceName="parts"/>
+	              </firstModelOperations>
+	            </initialOperation>
+	          </ownedTools>
+</toolSections>    
+<toolSections name="Tools">
+		  <ownedTools xsi:type="tool:DirectEditLabel" name="EditEntityTitle" inputLabelExpression="feature:title">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="title" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesKlaxon" inputLabelExpression="feature:klaxon">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="klaxon" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesLight" inputLabelExpression="feature:light">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="light" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesTrainNoise" inputLabelExpression="feature:trainNoise">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="trainNoise" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesWagonNoise" inputLabelExpression="feature:wagonNoise">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="wagonNoise" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetKlaxonAction" label="SetKlaxon" precondition="[self.oclIsKindOf(train::Accessories)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setklaxon()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetlightAction" label="Setlight" precondition="[self.oclIsKindOf(train::Accessories)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setlight()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSettrainnoiseAction" label="Settrainnoise" precondition="[self.oclIsKindOf(train::Accessories)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).settrainnoise()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetwagonnoiseAction" label="Setwagonnoise" precondition="[self.oclIsKindOf(train::Accessories)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setwagonnoise()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		  
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditMotionSpeed" inputLabelExpression="feature:speed">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="speed" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionFasterAction" label="Faster" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).faster()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionSlowerAction" label="Slower" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).slower()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionReverseAction" label="Reverse" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).reverse()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionStopAction" label="Stop" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).stop()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionSetspeedAction" label="Setspeed" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).setspeed()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		  
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainId" inputLabelExpression="feature:id">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="id" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainTitle" inputLabelExpression="feature:title">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="title" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainLocation" inputLabelExpression="feature:location">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="location" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainSummary" inputLabelExpression="feature:summary">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="summary" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainUser" inputLabelExpression="feature:user">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="user" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainIpAddress" inputLabelExpression="feature:ipAddress">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="ipAddress" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainTrainAddress" inputLabelExpression="feature:trainAddress">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="trainAddress" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainPort" inputLabelExpression="feature:port">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="port" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		  
+          <ownedTools xsi:type="tool_1:PopupMenu" name="CRUD operations" precondition="[self.oclIsKindOf(Entity)/]">
+                      <menuItemDescription xsi:type="tool_1:OperationAction" name="Create">
+                        <view name="views"/>
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(Entity).occiCreate()/]"/>
+                        </initialOperation>
+                      </menuItemDescription>
+                      <menuItemDescription xsi:type="tool_1:OperationAction" name="Retrieve">
+                        <view name="views"/>
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(Entity).occiRetrieve()/]"/>
+                        </initialOperation>
+                      </menuItemDescription>
+                      <menuItemDescription xsi:type="tool_1:OperationAction" name="Update">
+                        <view name="views"/>
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(Entity).occiUpdate()/]"/>
+                        </initialOperation>
+                      </menuItemDescription>
+                      <menuItemDescription xsi:type="tool_1:OperationAction" name="Delete">
+                        <view name="views"/>
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(Entity).occiDelete()/]"/>
+                        </initialOperation>
+                      </menuItemDescription>
+                    </ownedTools>
+</toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

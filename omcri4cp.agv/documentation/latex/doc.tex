@@ -1,0 +1,247 @@
+\section{OCCI AGV extension}
+\begin{center}
+\begin{tabular}{|l|l|}
+  \hline
+  \textbf{Name} & AGV \\
+  \hline  
+  \textbf{Scheme} & http://cristal.org/omcri4cp/agv\# \\
+  \hline
+  \textbf{Specification} &  \\
+  \hline
+\end{tabular}
+\end{center}
+
+\subsection{Imported OCCI extensions}
+
+\begin{center} 
+\begin{tabular}{|l|l|}
+  \hline
+  \textbf{Name} & core \\
+  \hline  
+  \textbf{Scheme} & http://schemas.ogf.org/occi/core\# \\
+  \hline
+\end{tabular}
+\end{center}
+
+
+\subsection{Kinds}
+\subsubsection{\texttt{AGV} kind}
+\begin{center}
+\begin{tabular}{|l|l|}
+  \hline
+  \textbf{Name} & AGV \\
+  \hline  
+  \textbf{Scheme} & http://cristal.org/omcri4cp/agv\# \\
+  \hline
+  \textbf{Title} &  \\
+  \hline
+  \textbf{Parent} & Resource (http://schemas.ogf.org/occi/core\#) \\
+  \hline
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item \textbf{\texttt{AGV} attributes}
+
+\begin{tabularx}{\textwidth}{|l|l|p{1.4cm}|p{1.3cm}|l|X|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Required} & \textbf{Mutable} & \textbf{Default} & \textbf{Description} \\
+  \hline  
+  user & String & true & true &  &  \\
+  \hline
+  password & String & true & true &  &  \\
+  \hline
+  ipAddress & String & true & true &  &  \\
+  \hline
+\end{tabularx}
+\end{itemize}
+
+
+
+\subsection{Mixins}
+\subsubsection{\texttt{Motion} mixin}
+\begin{center}
+\begin{tabular}{|l|l|}
+  \hline
+  \textbf{Name} & Motion \\
+  \hline  
+  \textbf{Scheme} & http://cristal.org/omcri4cp/agv\# \\
+  \hline
+  \textbf{Title} &  \\
+  \hline
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item \textbf{Applies to}:
+\begin{itemize}
+	\item AGV (http://cristal.org/omcri4cp/agv\#)
+\end{itemize}
+\end{itemize} 
+
+\begin{itemize}
+\item \textbf{\texttt{Motion} attributes}
+
+\begin{tabularx}{\textwidth}{|l|l|p{1.4cm}|p{1.3cm}|l|X|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Required} & \textbf{Mutable} & \textbf{Default} & \textbf{Description} \\
+  \hline  
+  duration & Integer & false & true &  &  \\
+  \hline
+  speed & Integer & false & true &  &  \\
+  \hline
+  angle & Integer & false & true &  &  \\
+  \hline
+\end{tabularx}
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{\texttt{Motion} actions}
+
+\begin{itemize}
+	\item \textbf{Scheme}: http://cristal.org/omcri4cp/agv/motion/action\#
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+  \hline
+  \textbf{Term}  & \textbf{Attributes} & \textbf{Title} \\
+  \hline  
+  move\_forward & &  \\
+  \hline
+  move\_backward & &  \\
+  \hline
+  left & &  \\
+  \hline
+  right & &  \\
+  \hline
+  left\_diago_forward & &  \\
+  \hline
+  left\_diago_backward & &  \\
+  \hline
+  right\_diago_forward & &  \\
+  \hline
+  right\_diago_backward & &  \\
+  \hline
+  turn\_left & &  \\
+  \hline
+  turn\_right & &  \\
+  \hline
+  stop & &  \\
+  \hline
+\end{tabular}
+\end{center}
+\end{itemize}
+
+ 
+\subsubsection{\texttt{Sensors} mixin}
+\begin{center}
+\begin{tabular}{|l|l|}
+  \hline
+  \textbf{Name} & Sensors \\
+  \hline  
+  \textbf{Scheme} & http://cristal.org/omcri4cp/agv\# \\
+  \hline
+  \textbf{Title} &  \\
+  \hline
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item \textbf{Applies to}:
+\begin{itemize}
+	\item AGV (http://cristal.org/omcri4cp/agv\#)
+\end{itemize}
+\end{itemize} 
+
+
+
+ 
+\subsubsection{\texttt{IR} mixin}
+\begin{center}
+\begin{tabular}{|l|l|}
+  \hline
+  \textbf{Name} & IR \\
+  \hline  
+  \textbf{Scheme} & http://cristal.org/omcri4cp/agv\# \\
+  \hline
+  \textbf{Title} &  \\
+  \hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item \textbf{Depends on}:
+\begin{itemize}
+	\item Sensors (http://cristal.org/omcri4cp/agv\#)
+\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+\item \textbf{\texttt{IR} actions}
+
+\begin{itemize}
+	\item \textbf{Scheme}: http://cristal.org/omcri4cp/agv/ir/action\#
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+  \hline
+  \textbf{Term}  & \textbf{Attributes} & \textbf{Title} \\
+  \hline  
+  sense\_line & &  \\
+  \hline
+\end{tabular}
+\end{center}
+\end{itemize}
+
+ 
+\subsubsection{\texttt{Ultrasonic} mixin}
+\begin{center}
+\begin{tabular}{|l|l|}
+  \hline
+  \textbf{Name} & Ultrasonic \\
+  \hline  
+  \textbf{Scheme} & http://cristal.org/omcri4cp/agv\# \\
+  \hline
+  \textbf{Title} &  \\
+  \hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item \textbf{Depends on}:
+\begin{itemize}
+	\item Sensors (http://cristal.org/omcri4cp/agv\#)
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{\texttt{Ultrasonic} attributes}
+
+\begin{tabularx}{\textwidth}{|l|l|p{1.4cm}|p{1.3cm}|l|X|}
+  \hline
+  \textbf{Attribute} & \textbf{Type} & \textbf{Required} & \textbf{Mutable} & \textbf{Default} & \textbf{Description} \\
+  \hline  
+  distance & Integer & false & true &  &  \\
+  \hline
+\end{tabularx}
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{\texttt{Ultrasonic} actions}
+
+\begin{itemize}
+	\item \textbf{Scheme}: http://cristal.org/omcri4cp/agv/ultrasonic/action\#
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+  \hline
+  \textbf{Term}  & \textbf{Attributes} & \textbf{Title} \\
+  \hline  
+  sense\_distance & &  \\
+  \hline
+\end{tabular}
+\end{center}
+\end{itemize}
+
+ 
