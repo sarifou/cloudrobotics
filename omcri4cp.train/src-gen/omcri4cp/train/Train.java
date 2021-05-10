@@ -13,6 +13,7 @@
 package omcri4cp.train;
 
 import omcricore.Robot;
+import org.eclipse.cmf.occi.core.Resource;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +38,7 @@ import omcricore.Robot;
  * @model
  * @generated
  */
-public interface Train extends Robot {
+public interface Train extends Resource {
 	/**
 	 * Returns the value of the '<em><b>User</b></em>' attribute.
 	 * <!-- begin-user-doc -->

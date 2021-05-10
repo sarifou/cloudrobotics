@@ -104,10 +104,6 @@ public class TrainAdapterFactory extends AdapterFactoryImpl {
 				return createResourceAdapter();
 			}
 			@Override
-			public Adapter caseRobot(Robot object) {
-				return createRobotAdapter();
-			}
-			@Override
 			public Adapter caseMixinBase(MixinBase object) {
 				return createMixinBaseAdapter();
 			}
@@ -198,20 +194,6 @@ public class TrainAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link omcricore.Robot <em>Robot</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see omcricore.Robot
-	 * @generated
-	 */
-	public Adapter createRobotAdapter() {
 		return null;
 	}
 

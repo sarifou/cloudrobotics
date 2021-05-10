@@ -24,6 +24,7 @@ import omcricore.provider.RobotItemProvider;
 
 import org.eclipse.cmf.occi.core.OCCIPackage;
 
+import org.eclipse.cmf.occi.core.provider.ResourceItemProvider;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -40,7 +41,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TrainItemProvider extends RobotItemProvider {
+public class TrainItemProvider extends ResourceItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

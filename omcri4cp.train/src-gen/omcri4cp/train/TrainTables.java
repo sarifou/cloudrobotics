@@ -22,7 +22,6 @@
 package omcri4cp.train;
 
 import omcri4cp.train.TrainTables;
-import omcricore.OmcricoreTables;
 import org.eclipse.cmf.occi.core.OCCITables;
 import org.eclipse.ocl.pivot.TemplateParameters;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorEnumeration;
@@ -160,7 +159,6 @@ public class TrainTables
 		private static final /*@NonNull*/ ExecutorFragment _Train__OclAny = new ExecutorFragment(Types._Train, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Train__OclElement = new ExecutorFragment(Types._Train, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Train__Resource = new ExecutorFragment(Types._Train, OCCITables.Types._Resource);
-		private static final /*@NonNull*/ ExecutorFragment _Train__Robot = new ExecutorFragment(Types._Train, OmcricoreTables.Types._Robot);
 		private static final /*@NonNull*/ ExecutorFragment _Train__Train = new ExecutorFragment(Types._Train, TrainTables.Types._Train);
 
 		static {
@@ -317,10 +315,9 @@ public class TrainTables
 				Fragments._Train__OclElement /* 1 */,
 				Fragments._Train__Entity /* 2 */,
 				Fragments._Train__Resource /* 3 */,
-				Fragments._Train__Robot /* 4 */,
-				Fragments._Train__Train /* 5 */
+				Fragments._Train__Train /* 4 */
 			};
-		private static final int /*@NonNull*/ [] __Train = { 1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Train = { 1,1,1,1,1 };
 
 		/**
 		 *	Install the fragment descriptors in the class descriptors.
@@ -455,12 +452,8 @@ public class TrainTables
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Train__Train = {};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Train__Entity = {
 			OCCITables.Operations._Entity__occiCreate /* occiCreate() */,
-			OCCITables.Operations._Entity__occiCreate /* occiCreate() */,
-			OCCITables.Operations._Entity__occiDelete /* occiDelete() */,
 			OCCITables.Operations._Entity__occiDelete /* occiDelete() */,
 			OCCITables.Operations._Entity__occiRetrieve /* occiRetrieve() */,
-			OCCITables.Operations._Entity__occiRetrieve /* occiRetrieve() */,
-			OCCITables.Operations._Entity__occiUpdate /* occiUpdate() */,
 			OCCITables.Operations._Entity__occiUpdate /* occiUpdate() */
 		};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Train__OclAny = {
@@ -490,7 +483,6 @@ public class TrainTables
 			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Train__Resource = {};
-		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Train__Robot = {};
 
 		/*
 		 *	Install the operation descriptors in the fragment descriptors.
@@ -516,7 +508,6 @@ public class TrainTables
 			Fragments._Train__OclAny.initOperations(_Train__OclAny);
 			Fragments._Train__OclElement.initOperations(_Train__OclElement);
 			Fragments._Train__Resource.initOperations(_Train__Resource);
-			Fragments._Train__Robot.initOperations(_Train__Robot);
 			Fragments._Train__Train.initOperations(_Train__Train);
 
 			Init.initEnd();

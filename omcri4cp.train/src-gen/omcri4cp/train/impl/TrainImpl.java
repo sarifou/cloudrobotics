@@ -17,6 +17,7 @@ import omcri4cp.train.TrainPackage;
 
 import omcricore.impl.RobotImpl;
 
+import org.eclipse.cmf.occi.core.impl.ResourceImpl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -39,7 +40,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TrainImpl extends RobotImpl implements Train {
+public class TrainImpl extends ResourceImpl implements Train {
 	/**
 	 * The default value of the '{@link #getUser() <em>User</em>}' attribute.
 	 * <!-- begin-user-doc -->

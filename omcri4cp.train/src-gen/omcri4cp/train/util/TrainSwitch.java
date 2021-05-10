@@ -85,7 +85,6 @@ public class TrainSwitch<T> extends Switch<T> {
 			case TrainPackage.TRAIN: {
 				Train train = (Train)theEObject;
 				T result = caseTrain(train);
-				if (result == null) result = caseRobot(train);
 				if (result == null) result = caseResource(train);
 				if (result == null) result = caseEntity(train);
 				if (result == null) result = defaultCase(theEObject);
@@ -181,21 +180,6 @@ public class TrainSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResource(Resource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Robot</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Robot</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRobot(Robot object) {
 		return null;
 	}
 

@@ -52,7 +52,6 @@ public final class TrainEditPlugin extends EMFPlugin {
 	public TrainEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     OmcricoreEditPlugin.INSTANCE,
 		     OCCIEditPlugin.INSTANCE,
 		   });
 	}

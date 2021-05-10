@@ -118,7 +118,6 @@ public class TrainPackageImpl extends EPackageImpl implements TrainPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		OmcricorePackage.eINSTANCE.eClass();
 		OCCIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -442,7 +441,6 @@ public class TrainPackageImpl extends EPackageImpl implements TrainPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		OmcricorePackage theOmcricorePackage = (OmcricorePackage)EPackage.Registry.INSTANCE.getEPackage(OmcricorePackage.eNS_URI);
 		OCCIPackage theOCCIPackage = (OCCIPackage)EPackage.Registry.INSTANCE.getEPackage(OCCIPackage.eNS_URI);
 
 		// Create type parameters
@@ -450,7 +448,7 @@ public class TrainPackageImpl extends EPackageImpl implements TrainPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		trainEClass.getESuperTypes().add(theOmcricorePackage.getRobot());
+		trainEClass.getESuperTypes().add(theOCCIPackage.getResource());
 		motionEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 		accessoriesEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 

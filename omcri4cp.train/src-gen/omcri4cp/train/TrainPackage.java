@@ -88,7 +88,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__ID = OmcricorePackage.ROBOT__ID;
+	int TRAIN__ID = OCCIPackage.RESOURCE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -97,7 +97,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__TITLE = OmcricorePackage.ROBOT__TITLE;
+	int TRAIN__TITLE = OCCIPackage.RESOURCE__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Kind</b></em>' reference.
@@ -106,7 +106,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__KIND = OmcricorePackage.ROBOT__KIND;
+	int TRAIN__KIND = OCCIPackage.RESOURCE__KIND;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' attribute.
@@ -115,7 +115,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__LOCATION = OmcricorePackage.ROBOT__LOCATION;
+	int TRAIN__LOCATION = OCCIPackage.RESOURCE__LOCATION;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -124,7 +124,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__ATTRIBUTES = OmcricorePackage.ROBOT__ATTRIBUTES;
+	int TRAIN__ATTRIBUTES = OCCIPackage.RESOURCE__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Mixins</b></em>' reference list.
@@ -133,7 +133,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__MIXINS = OmcricorePackage.ROBOT__MIXINS;
+	int TRAIN__MIXINS = OCCIPackage.RESOURCE__MIXINS;
 
 	/**
 	 * The feature id for the '<em><b>Parts</b></em>' containment reference list.
@@ -142,7 +142,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__PARTS = OmcricorePackage.ROBOT__PARTS;
+	int TRAIN__PARTS = OCCIPackage.RESOURCE__PARTS;
 
 	/**
 	 * The feature id for the '<em><b>Summary</b></em>' attribute.
@@ -151,7 +151,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__SUMMARY = OmcricorePackage.ROBOT__SUMMARY;
+	int TRAIN__SUMMARY = OCCIPackage.RESOURCE__SUMMARY;
 
 	/**
 	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -160,7 +160,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__LINKS = OmcricorePackage.ROBOT__LINKS;
+	int TRAIN__LINKS = OCCIPackage.RESOURCE__LINKS;
 
 	/**
 	 * The feature id for the '<em><b>Rlinks</b></em>' reference list.
@@ -169,7 +169,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__RLINKS = OmcricorePackage.ROBOT__RLINKS;
+	int TRAIN__RLINKS = OCCIPackage.RESOURCE__RLINKS;
 
 	/**
 	 * The feature id for the '<em><b>User</b></em>' attribute.
@@ -178,7 +178,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__USER = OmcricorePackage.ROBOT_FEATURE_COUNT + 0;
+	int TRAIN__USER = OCCIPackage.RESOURCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Ip Address</b></em>' attribute.
@@ -187,7 +187,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__IP_ADDRESS = OmcricorePackage.ROBOT_FEATURE_COUNT + 1;
+	int TRAIN__IP_ADDRESS = OCCIPackage.RESOURCE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Train Address</b></em>' attribute.
@@ -196,7 +196,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__TRAIN_ADDRESS = OmcricorePackage.ROBOT_FEATURE_COUNT + 2;
+	int TRAIN__TRAIN_ADDRESS = OCCIPackage.RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' attribute.
@@ -205,7 +205,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN__PORT = OmcricorePackage.ROBOT_FEATURE_COUNT + 3;
+	int TRAIN__PORT = OCCIPackage.RESOURCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Train</em>' class.
@@ -214,7 +214,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN_FEATURE_COUNT = OmcricorePackage.ROBOT_FEATURE_COUNT + 4;
+	int TRAIN_FEATURE_COUNT = OCCIPackage.RESOURCE_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Occi Create</em>' operation.
@@ -223,7 +223,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN___OCCI_CREATE = OmcricorePackage.ROBOT___OCCI_CREATE;
+	int TRAIN___OCCI_CREATE = OCCIPackage.RESOURCE___OCCI_CREATE;
 
 	/**
 	 * The operation id for the '<em>Occi Retrieve</em>' operation.
@@ -232,7 +232,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN___OCCI_RETRIEVE = OmcricorePackage.ROBOT___OCCI_RETRIEVE;
+	int TRAIN___OCCI_RETRIEVE = OCCIPackage.RESOURCE___OCCI_RETRIEVE;
 
 	/**
 	 * The operation id for the '<em>Occi Update</em>' operation.
@@ -241,7 +241,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN___OCCI_UPDATE = OmcricorePackage.ROBOT___OCCI_UPDATE;
+	int TRAIN___OCCI_UPDATE = OCCIPackage.RESOURCE___OCCI_UPDATE;
 
 	/**
 	 * The operation id for the '<em>Occi Delete</em>' operation.
@@ -250,7 +250,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN___OCCI_DELETE = OmcricorePackage.ROBOT___OCCI_DELETE;
+	int TRAIN___OCCI_DELETE = OCCIPackage.RESOURCE___OCCI_DELETE;
 
 	/**
 	 * The number of operations of the '<em>Train</em>' class.
@@ -259,7 +259,7 @@ public interface TrainPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRAIN_OPERATION_COUNT = OmcricorePackage.ROBOT_OPERATION_COUNT + 0;
+	int TRAIN_OPERATION_COUNT = OCCIPackage.RESOURCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link omcri4cp.train.impl.MotionImpl <em>Motion</em>}' class.
