@@ -59,33 +59,11 @@ public class MotionItemProvider extends MixinBaseItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDurationPropertyDescriptor(object);
 			addSpeedPropertyDescriptor(object);
+			addDurationPropertyDescriptor(object);
 			addAnglePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Duration feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDurationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Motion_duration_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Motion_duration_feature", "_UI_Motion_type"),
-				 AgvPackage.Literals.MOTION__DURATION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -102,6 +80,28 @@ public class MotionItemProvider extends MixinBaseItemProvider {
 				 getString("_UI_Motion_speed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Motion_speed_feature", "_UI_Motion_type"),
 				 AgvPackage.Literals.MOTION__SPEED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Duration feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDurationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Motion_duration_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Motion_duration_feature", "_UI_Motion_type"),
+				 AgvPackage.Literals.MOTION__DURATION,
 				 true,
 				 false,
 				 false,
@@ -152,7 +152,7 @@ public class MotionItemProvider extends MixinBaseItemProvider {
 	@Override
 	public String getText(Object object) {
 		Motion motion = (Motion)object;
-		return getString("_UI_Motion_type") + " " + motion.getDuration();
+		return getString("_UI_Motion_type") + " " + motion.getSpeed();
 	}
 
 
@@ -168,8 +168,8 @@ public class MotionItemProvider extends MixinBaseItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Motion.class)) {
-			case AgvPackage.MOTION__DURATION:
 			case AgvPackage.MOTION__SPEED:
+			case AgvPackage.MOTION__DURATION:
 			case AgvPackage.MOTION__ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

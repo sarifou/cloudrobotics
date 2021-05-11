@@ -51,12 +51,12 @@ public class MotionConnector extends omcri4cp.agv.impl.MotionImpl
 	public void publish(long[] msg) {
 		try {
 			publisher = new Topic(AgvConnector.ros, "tquad/driver", "std_msgs/Int64MultiArray");
-			request = new Int64MultiArray(new MultiArrayLayout(
-					new MultiArrayDimension[] {
-						new MultiArrayDimension("test", 1,0)	
-					}, 0), msg);
+			request = new Int64MultiArray(new MultiArrayLayout(), msg);
 			System.out.println(request);
 			publisher.publish(request);
+			Thread.sleep(duration);
+			Int64MultiArray stop_request =  new Int64MultiArray(new MultiArrayLayout(), new long[] {0,0,0,0});
+			publisher.publish(stop_request);
 		}catch (Exception error) {
 			LOGGER.error("An error occured" + error);
 		}
@@ -79,51 +79,51 @@ public class MotionConnector extends omcri4cp.agv.impl.MotionImpl
 	@Override
 	public void left_translation()
 	{
-		msg = new long[] {speed, speed,speed, speed};
+		msg = new long[] {-speed, speed, speed, -speed};
 		publish(msg);
 	}
 	@Override
 	public void right_translation()
 	{
-		msg = new long[] {speed, speed,speed, speed};
+		msg = new long[] {speed, -speed,-speed, speed};
 		publish(msg);
 	}
 	@Override
 	public void turn_left()
 	{
-		msg = new long[] {speed, speed,speed, speed};
+		msg = new long[] {-speed, -speed,speed, speed};
 		publish(msg);
 	}
 	@Override
 	public void turn_right()
 	{
-		msg = new long[] {speed, speed,speed, speed};
+		msg = new long[] {speed, speed,-speed, -speed};
 		publish(msg);
 	}
 	@Override
 	public void left_diago_forward()
 	{
-		msg = new long[] {speed, speed,speed, speed};
+		msg = new long[] {0, speed,speed, 0};
 		publish(msg);
 	}
 	
 	@Override
 	public void left_diago_backward()
 	{
-		msg = new long[] {speed, speed,speed, speed};
+		msg = new long[] {-speed, 0,0, -speed};
 		publish(msg);
 	}
 	@Override
 	public void right_diago_forward()
 	{
-		msg = new long[] {speed, speed,speed, speed};
+		msg = new long[] {speed, 0,0, speed};
 		publish(msg);
 	}
 	
 	@Override
 	public void right_diago_backward()
 	{
-		msg = new long[] {speed, speed,speed, speed};
+		msg = new long[] {0, -speed,-speed, 0};
 		publish(msg);
 	}
 	

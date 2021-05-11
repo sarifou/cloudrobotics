@@ -63,8 +63,8 @@ public class AgvItemProvider extends ResourceItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addUserPropertyDescriptor(object);
-			addPasswordPropertyDescriptor(object);
 			addIpAddressPropertyDescriptor(object);
+			addPasswordPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,28 +92,6 @@ public class AgvItemProvider extends ResourceItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Password feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPasswordPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Agv_password_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Agv_password_feature", "_UI_Agv_type"),
-				 AgvPackage.Literals.AGV__PASSWORD,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Ip Address feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,6 +105,28 @@ public class AgvItemProvider extends ResourceItemProvider {
 				 getString("_UI_Agv_ipAddress_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Agv_ipAddress_feature", "_UI_Agv_type"),
 				 AgvPackage.Literals.AGV__IP_ADDRESS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Password feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPasswordPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Agv_password_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Agv_password_feature", "_UI_Agv_type"),
+				 AgvPackage.Literals.AGV__PASSWORD,
 				 true,
 				 false,
 				 false,
@@ -174,8 +174,8 @@ public class AgvItemProvider extends ResourceItemProvider {
 
 		switch (notification.getFeatureID(Agv.class)) {
 			case AgvPackage.AGV__USER:
-			case AgvPackage.AGV__PASSWORD:
 			case AgvPackage.AGV__IP_ADDRESS:
+			case AgvPackage.AGV__PASSWORD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -197,21 +197,6 @@ public class AgvItemProvider extends ResourceItemProvider {
 			(createChildParameter
 				(OCCIPackage.Literals.ENTITY__PARTS,
 				 AgvFactory.eINSTANCE.createMotion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OCCIPackage.Literals.ENTITY__PARTS,
-				 AgvFactory.eINSTANCE.createSensors()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OCCIPackage.Literals.ENTITY__PARTS,
-				 AgvFactory.eINSTANCE.createIr()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(OCCIPackage.Literals.ENTITY__PARTS,
-				 AgvFactory.eINSTANCE.createUltrasonic()));
 	}
 
 	/**

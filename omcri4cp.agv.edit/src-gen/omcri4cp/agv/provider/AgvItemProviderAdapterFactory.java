@@ -128,75 +128,6 @@ public class AgvItemProviderAdapterFactory extends AgvAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link omcri4cp.agv.Sensors} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SensorsItemProvider sensorsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link omcri4cp.agv.Sensors}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSensorsAdapter() {
-		if (sensorsItemProvider == null) {
-			sensorsItemProvider = new SensorsItemProvider(this);
-		}
-
-		return sensorsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link omcri4cp.agv.Ir} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IrItemProvider irItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link omcri4cp.agv.Ir}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIrAdapter() {
-		if (irItemProvider == null) {
-			irItemProvider = new IrItemProvider(this);
-		}
-
-		return irItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link omcri4cp.agv.Ultrasonic} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UltrasonicItemProvider ultrasonicItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link omcri4cp.agv.Ultrasonic}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUltrasonicAdapter() {
-		if (ultrasonicItemProvider == null) {
-			ultrasonicItemProvider = new UltrasonicItemProvider(this);
-		}
-
-		return ultrasonicItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -297,9 +228,6 @@ public class AgvItemProviderAdapterFactory extends AgvAdapterFactory implements 
 	public void dispose() {
 		if (agvItemProvider != null) agvItemProvider.dispose();
 		if (motionItemProvider != null) motionItemProvider.dispose();
-		if (sensorsItemProvider != null) sensorsItemProvider.dispose();
-		if (irItemProvider != null) irItemProvider.dispose();
-		if (ultrasonicItemProvider != null) ultrasonicItemProvider.dispose();
 	}
 
 }
