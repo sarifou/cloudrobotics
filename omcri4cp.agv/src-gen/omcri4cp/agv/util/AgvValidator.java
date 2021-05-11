@@ -60,20 +60,12 @@ public class AgvValidator extends EObjectValidator {
 	public static final int MOTION__APPLIES_CONSTRAINT = 1;
 
 	/**
-	 * The {@link org.eclipse.emf.common.util.Diagnostic#getCode() code} for constraint 'Applies Constraint' of 'Sensors'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static final int SENSORS__APPLIES_CONSTRAINT = 2;
-
-	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 2;
+	private static final int GENERATED_DIAGNOSTIC_CODE_COUNT = 1;
 
 	/**
 	 * A constant with a fixed name that can be used as the base value for additional hand written constants in a derived class.
@@ -126,12 +118,6 @@ public class AgvValidator extends EObjectValidator {
 				return validateAgv((Agv)value, diagnostics, context);
 			case AgvPackage.MOTION:
 				return validateMotion((Motion)value, diagnostics, context);
-			case AgvPackage.SENSORS:
-				return validateSensors((Sensors)value, diagnostics, context);
-			case AgvPackage.IR:
-				return validateIr((Ir)value, diagnostics, context);
-			case AgvPackage.ULTRASONIC:
-				return validateUltrasonic((Ultrasonic)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -187,73 +173,6 @@ public class AgvValidator extends EObjectValidator {
 	 */
 	public boolean validateMotion_appliesConstraint(Motion motion, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return motion.appliesConstraint(diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateSensors(Sensors sensors, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(sensors, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(sensors, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(sensors, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(sensors, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(sensors, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(sensors, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(sensors, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(sensors, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(sensors, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSensors_appliesConstraint(sensors, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * Validates the appliesConstraint constraint of '<em>Sensors</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateSensors_appliesConstraint(Sensors sensors, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return sensors.appliesConstraint(diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateIr(Ir ir, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(ir, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(ir, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(ir, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(ir, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(ir, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(ir, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(ir, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(ir, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(ir, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSensors_appliesConstraint(ir, diagnostics, context);
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateUltrasonic(Ultrasonic ultrasonic, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(ultrasonic, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(ultrasonic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(ultrasonic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(ultrasonic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(ultrasonic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(ultrasonic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(ultrasonic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(ultrasonic, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(ultrasonic, diagnostics, context);
-		if (result || diagnostics != null) result &= validateSensors_appliesConstraint(ultrasonic, diagnostics, context);
-		return result;
 	}
 
 	/**

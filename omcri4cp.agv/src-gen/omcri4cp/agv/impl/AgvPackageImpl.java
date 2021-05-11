@@ -15,10 +15,7 @@ package omcri4cp.agv.impl;
 import omcri4cp.agv.Agv;
 import omcri4cp.agv.AgvFactory;
 import omcri4cp.agv.AgvPackage;
-import omcri4cp.agv.Ir;
 import omcri4cp.agv.Motion;
-import omcri4cp.agv.Sensors;
-import omcri4cp.agv.Ultrasonic;
 
 import omcri4cp.agv.util.AgvValidator;
 
@@ -53,27 +50,6 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * @generated
 	 */
 	private EClass motionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sensorsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass irEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ultrasonicEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -171,7 +147,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAgv_Password() {
+	public EAttribute getAgv_IpAddress() {
 		return (EAttribute)agvEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -180,7 +156,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAgv_IpAddress() {
+	public EAttribute getAgv_Password() {
 		return (EAttribute)agvEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -198,7 +174,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMotion_Duration() {
+	public EAttribute getMotion_Speed() {
 		return (EAttribute)motionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -207,7 +183,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMotion_Speed() {
+	public EAttribute getMotion_Duration() {
 		return (EAttribute)motionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -243,7 +219,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMotion__Left() {
+	public EOperation getMotion__Left_translation() {
 		return motionEClass.getEOperations().get(2);
 	}
 
@@ -252,7 +228,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMotion__Right() {
+	public EOperation getMotion__Right_translation() {
 		return motionEClass.getEOperations().get(3);
 	}
 
@@ -261,7 +237,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMotion__Left_diago_forward() {
+	public EOperation getMotion__Turn_left() {
 		return motionEClass.getEOperations().get(4);
 	}
 
@@ -270,7 +246,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMotion__Left_diago_backward() {
+	public EOperation getMotion__Turn_right() {
 		return motionEClass.getEOperations().get(5);
 	}
 
@@ -279,7 +255,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMotion__Right_diago_forward() {
+	public EOperation getMotion__Left_diago_forward() {
 		return motionEClass.getEOperations().get(6);
 	}
 
@@ -288,7 +264,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMotion__Right_diago_backward() {
+	public EOperation getMotion__Left_diago_backward() {
 		return motionEClass.getEOperations().get(7);
 	}
 
@@ -297,7 +273,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMotion__Turn_left() {
+	public EOperation getMotion__Right_diago_forward() {
 		return motionEClass.getEOperations().get(8);
 	}
 
@@ -306,7 +282,7 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getMotion__Turn_right() {
+	public EOperation getMotion__Right_diago_backward() {
 		return motionEClass.getEOperations().get(9);
 	}
 
@@ -326,69 +302,6 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 	 */
 	public EOperation getMotion__AppliesConstraint__DiagnosticChain_Map() {
 		return motionEClass.getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSensors() {
-		return sensorsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSensors__AppliesConstraint__DiagnosticChain_Map() {
-		return sensorsEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getIr() {
-		return irEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIr__Sense_line() {
-		return irEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getUltrasonic() {
-		return ultrasonicEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getUltrasonic_Distance() {
-		return (EAttribute)ultrasonicEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getUltrasonic__Sense_distance() {
-		return ultrasonicEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -421,35 +334,25 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 		// Create classes and their features
 		agvEClass = createEClass(AGV);
 		createEAttribute(agvEClass, AGV__USER);
-		createEAttribute(agvEClass, AGV__PASSWORD);
 		createEAttribute(agvEClass, AGV__IP_ADDRESS);
+		createEAttribute(agvEClass, AGV__PASSWORD);
 
 		motionEClass = createEClass(MOTION);
-		createEAttribute(motionEClass, MOTION__DURATION);
 		createEAttribute(motionEClass, MOTION__SPEED);
+		createEAttribute(motionEClass, MOTION__DURATION);
 		createEAttribute(motionEClass, MOTION__ANGLE);
 		createEOperation(motionEClass, MOTION___MOVE_FORWARD);
 		createEOperation(motionEClass, MOTION___MOVE_BACKWARD);
-		createEOperation(motionEClass, MOTION___LEFT);
-		createEOperation(motionEClass, MOTION___RIGHT);
+		createEOperation(motionEClass, MOTION___LEFT_TRANSLATION);
+		createEOperation(motionEClass, MOTION___RIGHT_TRANSLATION);
+		createEOperation(motionEClass, MOTION___TURN_LEFT);
+		createEOperation(motionEClass, MOTION___TURN_RIGHT);
 		createEOperation(motionEClass, MOTION___LEFT_DIAGO_FORWARD);
 		createEOperation(motionEClass, MOTION___LEFT_DIAGO_BACKWARD);
 		createEOperation(motionEClass, MOTION___RIGHT_DIAGO_FORWARD);
 		createEOperation(motionEClass, MOTION___RIGHT_DIAGO_BACKWARD);
-		createEOperation(motionEClass, MOTION___TURN_LEFT);
-		createEOperation(motionEClass, MOTION___TURN_RIGHT);
 		createEOperation(motionEClass, MOTION___STOP);
 		createEOperation(motionEClass, MOTION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
-
-		sensorsEClass = createEClass(SENSORS);
-		createEOperation(sensorsEClass, SENSORS___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP);
-
-		irEClass = createEClass(IR);
-		createEOperation(irEClass, IR___SENSE_LINE);
-
-		ultrasonicEClass = createEClass(ULTRASONIC);
-		createEAttribute(ultrasonicEClass, ULTRASONIC__DISTANCE);
-		createEOperation(ultrasonicEClass, ULTRASONIC___SENSE_DISTANCE);
 	}
 
 	/**
@@ -485,30 +388,29 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 		// Add supertypes to classes
 		agvEClass.getESuperTypes().add(theOCCIPackage.getResource());
 		motionEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
-		sensorsEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
-		irEClass.getESuperTypes().add(this.getSensors());
-		irEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
-		ultrasonicEClass.getESuperTypes().add(this.getSensors());
-		ultrasonicEClass.getESuperTypes().add(theOCCIPackage.getMixinBase());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(agvEClass, Agv.class, "Agv", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAgv_User(), ecorePackage.getEString(), "user", null, 1, 1, Agv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAgv_Password(), ecorePackage.getEString(), "password", null, 1, 1, Agv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAgv_IpAddress(), ecorePackage.getEString(), "ipAddress", null, 1, 1, Agv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAgv_Password(), ecorePackage.getEString(), "password", null, 1, 1, Agv.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(motionEClass, Motion.class, "Motion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMotion_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, Motion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMotion_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, Motion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMotion_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, Motion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMotion_Angle(), ecorePackage.getEInt(), "angle", null, 0, 1, Motion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getMotion__Move_forward(), null, "move_forward", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getMotion__Move_backward(), null, "move_backward", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getMotion__Left(), null, "left", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getMotion__Left_translation(), null, "left_translation", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getMotion__Right(), null, "right", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getMotion__Right_translation(), null, "right_translation", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getMotion__Turn_left(), null, "turn_left", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getMotion__Turn_right(), null, "turn_right", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getMotion__Left_diago_forward(), null, "left_diago_forward", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -517,10 +419,6 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 		initEOperation(getMotion__Right_diago_forward(), null, "right_diago_forward", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getMotion__Right_diago_backward(), null, "right_diago_backward", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getMotion__Turn_left(), null, "turn_left", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getMotion__Turn_right(), null, "turn_right", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getMotion__Stop(), null, "stop", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -532,26 +430,6 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 		g2 = createEGenericType(ecorePackage.getEJavaObject());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(sensorsEClass, Sensors.class, "Sensors", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getSensors__AppliesConstraint__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "appliesConstraint", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(ecorePackage.getEMap());
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEJavaObject());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(irEClass, Ir.class, "Ir", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getIr__Sense_line(), null, "sense_line", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(ultrasonicEClass, Ultrasonic.class, "Ultrasonic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUltrasonic_Distance(), ecorePackage.getEInt(), "distance", null, 0, 1, Ultrasonic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getUltrasonic__Sense_distance(), null, "sense_distance", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -576,12 +454,6 @@ public class AgvPackageImpl extends EPackageImpl implements AgvPackage {
 		   });
 		addAnnotation
 		  (motionEClass,
-		   source,
-		   new String[] {
-			   "constraints", "appliesConstraint"
-		   });
-		addAnnotation
-		  (sensorsEClass,
 		   source,
 		   new String[] {
 			   "constraints", "appliesConstraint"

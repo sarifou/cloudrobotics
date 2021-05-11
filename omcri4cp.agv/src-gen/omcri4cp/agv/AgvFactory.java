@@ -50,33 +50,6 @@ public interface AgvFactory extends EFactory {
 	Motion createMotion();
 
 	/**
-	 * Returns a new object of class '<em>Sensors</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sensors</em>'.
-	 * @generated
-	 */
-	Sensors createSensors();
-
-	/**
-	 * Returns a new object of class '<em>Ir</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ir</em>'.
-	 * @generated
-	 */
-	Ir createIr();
-
-	/**
-	 * Returns a new object of class '<em>Ultrasonic</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ultrasonic</em>'.
-	 * @generated
-	 */
-	Ultrasonic createUltrasonic();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

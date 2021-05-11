@@ -10,12 +10,14 @@
  * - Philippe Merle <philippe.merle@inria.fr>
  * - Faiez Zalila <faiez.zalila@inria.fr>
  *
- * Generated at Mon May 03 19:06:20 CEST 2021 from platform:/resource/omcri4cp.agv/model/agv.occie by org.eclipse.cmf.occi.core.gen.connector
+ * Generated at Mon May 10 15:19:28 CEST 2021 from platform:/resource/omcri4cp.agv/model/agv.occie by org.eclipse.cmf.occi.core.gen.connector
  */
 package omcri4cp.agv.connector;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import edu.wpi.rail.jrosbridge.Ros;
 
 
 
@@ -32,7 +34,7 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	 */
 	private static Logger LOGGER = LoggerFactory.getLogger(AgvConnector.class);
 
-	// Start of user code Agvconnector_constructor
+	public static Ros ros ;
 	/**
 	 * Constructs a agv connector.
 	 */
@@ -41,12 +43,6 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 		LOGGER.debug("Constructor called on " + this);
 		// TODO: Implement this constructor.
 	}
-	// End of user code
-	//
-	// OCCI CRUD callback operations.
-	//
-	
-	// Start of user code AgvocciCreate
 	/**
 	 * Called when this Agv instance is completely created.
 	 */
@@ -54,48 +50,23 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void occiCreate()
 	{
 		LOGGER.debug("occiCreate() called on " + this);
-		// TODO: Implement this callback or remove this method.
+		
+		try {
+			ros = new Ros(ipAddress);
+			ros.connect();
+		} catch (Exception e) {
+			LOGGER.error("Cannot connect agv resource to the rosbridge server");
+		}
 	}
-	// End of user code
-
-	// Start of user code Agv_occiRetrieve_method
-	/**
-	 * Called when this Agv instance must be retrieved.
-	 */
-	@Override
-	public void occiRetrieve()
-	{
-		LOGGER.debug("occiRetrieve() called on " + this);
-		// TODO: Implement this callback or remove this method.
-	}
-	// End of user code
-
-	// Start of user code Agv_occiUpdate_method
-	/**
-	 * Called when this Agv instance is completely updated.
-	 */
-	@Override
-	public void occiUpdate()
-	{
-		LOGGER.debug("occiUpdate() called on " + this);
-		// TODO: Implement this callback or remove this method.
-	}
-	// End of user code
-
-	// Start of user code AgvocciDelete_method
-	/**
-	 * Called when this Agv instance will be deleted.
-	 */
-	@Override
+	
 	public void occiDelete()
 	{
 		LOGGER.debug("occiDelete() called on " + this);
-		// TODO: Implement this callback or remove this method.
+		try {
+			ros.disconnect();
+		} catch (Exception e) {
+			LOGGER.error("Cannot disconnet agv resource");
+		}
 	}
-	// End of user code
-
-	//
-	// Agv actions.
-	//
-
+	
 }	

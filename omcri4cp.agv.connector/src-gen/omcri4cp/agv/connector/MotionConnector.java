@@ -10,12 +10,17 @@
  * - Philippe Merle <philippe.merle@inria.fr>
  * - Faiez Zalila <faiez.zalila@inria.fr>
  *
- * Generated at Mon May 03 19:06:20 CEST 2021 from platform:/resource/omcri4cp.agv/model/agv.occie by org.eclipse.cmf.occi.core.gen.connector
+ * Generated at Mon May 10 15:19:28 CEST 2021 from platform:/resource/omcri4cp.agv/model/agv.occie by org.eclipse.cmf.occi.core.gen.connector
  */
 package omcri4cp.agv.connector;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import edu.wpi.rail.jrosbridge.Topic;
+import edu.wpi.rail.jrosbridge.messages.std.Int64MultiArray;
+import edu.wpi.rail.jrosbridge.messages.std.MultiArrayDimension;
+import edu.wpi.rail.jrosbridge.messages.std.MultiArrayLayout;
 
 
 
@@ -27,186 +32,106 @@ import org.slf4j.LoggerFactory;
  */
 public class MotionConnector extends omcri4cp.agv.impl.MotionImpl
 {
-	/**
-	 * Initialize the logger.
-	 */
+	//Initialize the logger.
+	
 	private static Logger LOGGER = LoggerFactory.getLogger(MotionConnector.class);
+	
+	private Int64MultiArray request ;
+	
+	private long[] msg ;
+	
+	private Topic publisher ;
 
-	// Start of user code Motionconnector_constructor
-	/**
-	 * Constructs a motion connector.
-	 */
+	// Constructs a motion connector.
 	MotionConnector()
 	{
-		LOGGER.debug("Constructor called on " + this);
-		// TODO: Implement this constructor.
+		
 	}
-	// End of user code
-
-
-	// Start of user code Motion_Mixin_move_forward_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: move_forward
-     * - title: 
-	 */
+	
+	public void publish(long[] msg) {
+		try {
+			publisher = new Topic(AgvConnector.ros, "tquad/driver", "std_msgs/Int64MultiArray");
+			request = new Int64MultiArray(new MultiArrayLayout(
+					new MultiArrayDimension[] {
+						new MultiArrayDimension("test", 1,0)	
+					}, 0), msg);
+			System.out.println(request);
+			publisher.publish(request);
+		}catch (Exception error) {
+			LOGGER.error("An error occured" + error);
+		}
+	}
+	// Implement OCCI action to move forward AGV
 	@Override
 	public void move_forward()
 	{
-		LOGGER.debug("Action move_forward() called on " + this);
-
-		// TODO: Implement how to move_forward this motion.
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
 	}
-	// End of user code
-	// Start of user code Motion_Mixin_move_backward_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: move_backward
-     * - title: 
-	 */
+	// Implement OCCI action to move backward AGV
 	@Override
 	public void move_backward()
 	{
-		LOGGER.debug("Action move_backward() called on " + this);
-
-		// TODO: Implement how to move_backward this motion.
+		msg = new long[] {-speed, -speed, -speed, -speed};
+		publish(msg);
 	}
-	// End of user code
-	// Start of user code Motion_Mixin_left_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: left
-     * - title: 
-	 */
+	// Implement OCCI action to move left translation
 	@Override
-	public void left()
+	public void left_translation()
 	{
-		LOGGER.debug("Action left() called on " + this);
-
-		// TODO: Implement how to left this motion.
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
 	}
-	// End of user code
-	// Start of user code Motion_Mixin_right_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: right
-     * - title: 
-	 */
 	@Override
-	public void right()
+	public void right_translation()
 	{
-		LOGGER.debug("Action right() called on " + this);
-
-		// TODO: Implement how to right this motion.
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
 	}
-	// End of user code
-	// Start of user code Motion_Mixin_left_diago_forward_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: left_diago_forward
-     * - title: 
-	 */
-	@Override
-	public void left_diago_forward()
-	{
-		LOGGER.debug("Action left_diago_forward() called on " + this);
-
-		// TODO: Implement how to left_diago_forward this motion.
-	}
-	// End of user code
-	// Start of user code Motion_Mixin_left_diago_backward_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: left_diago_backward
-     * - title: 
-	 */
-	@Override
-	public void left_diago_backward()
-	{
-		LOGGER.debug("Action left_diago_backward() called on " + this);
-
-		// TODO: Implement how to left_diago_backward this motion.
-	}
-	// End of user code
-	// Start of user code Motion_Mixin_right_diago_forward_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: right_diago_forward
-     * - title: 
-	 */
-	@Override
-	public void right_diago_forward()
-	{
-		LOGGER.debug("Action right_diago_forward() called on " + this);
-
-		// TODO: Implement how to right_diago_forward this motion.
-	}
-	// End of user code
-	// Start of user code Motion_Mixin_right_diago_backward_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: right_diago_backward
-     * - title: 
-	 */
-	@Override
-	public void right_diago_backward()
-	{
-		LOGGER.debug("Action right_diago_backward() called on " + this);
-
-		// TODO: Implement how to right_diago_backward this motion.
-	}
-	// End of user code
-	// Start of user code Motion_Mixin_turn_left_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: turn_left
-     * - title: 
-	 */
 	@Override
 	public void turn_left()
 	{
-		LOGGER.debug("Action turn_left() called on " + this);
-
-		// TODO: Implement how to turn_left this motion.
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
 	}
-	// End of user code
-	// Start of user code Motion_Mixin_turn_right_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: turn_right
-     * - title: 
-	 */
 	@Override
 	public void turn_right()
 	{
-		LOGGER.debug("Action turn_right() called on " + this);
-
-		// TODO: Implement how to turn_right this motion.
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
 	}
-	// End of user code
-	// Start of user code Motion_Mixin_stop_action
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/motion/action#
-     * - term: stop
-     * - title: 
-	 */
+	@Override
+	public void left_diago_forward()
+	{
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
+	}
+	
+	@Override
+	public void left_diago_backward()
+	{
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
+	}
+	@Override
+	public void right_diago_forward()
+	{
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
+	}
+	
+	@Override
+	public void right_diago_backward()
+	{
+		msg = new long[] {speed, speed,speed, speed};
+		publish(msg);
+	}
+	
 	@Override
 	public void stop()
 	{
-		LOGGER.debug("Action stop() called on " + this);
-
-		// TODO: Implement how to stop this motion.
+		msg = new long[] {0, 0,0, 0};
+		publish(msg);
 	}
-	// End of user code
+	
 }	

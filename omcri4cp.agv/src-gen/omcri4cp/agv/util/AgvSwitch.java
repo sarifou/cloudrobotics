@@ -95,29 +95,6 @@ public class AgvSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AgvPackage.SENSORS: {
-				Sensors sensors = (Sensors)theEObject;
-				T result = caseSensors(sensors);
-				if (result == null) result = caseMixinBase(sensors);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AgvPackage.IR: {
-				Ir ir = (Ir)theEObject;
-				T result = caseIr(ir);
-				if (result == null) result = caseSensors(ir);
-				if (result == null) result = caseMixinBase(ir);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AgvPackage.ULTRASONIC: {
-				Ultrasonic ultrasonic = (Ultrasonic)theEObject;
-				T result = caseUltrasonic(ultrasonic);
-				if (result == null) result = caseSensors(ultrasonic);
-				if (result == null) result = caseMixinBase(ultrasonic);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -149,51 +126,6 @@ public class AgvSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMotion(Motion object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sensors</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sensors</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSensors(Sensors object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ir</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ir</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIr(Ir object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ultrasonic</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ultrasonic</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUltrasonic(Ultrasonic object) {
 		return null;
 	}
 

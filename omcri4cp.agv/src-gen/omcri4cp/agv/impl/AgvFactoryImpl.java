@@ -68,9 +68,6 @@ public class AgvFactoryImpl extends EFactoryImpl implements AgvFactory {
 		switch (eClass.getClassifierID()) {
 			case AgvPackage.AGV: return createAgv();
 			case AgvPackage.MOTION: return createMotion();
-			case AgvPackage.SENSORS: return createSensors();
-			case AgvPackage.IR: return createIr();
-			case AgvPackage.ULTRASONIC: return createUltrasonic();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -94,36 +91,6 @@ public class AgvFactoryImpl extends EFactoryImpl implements AgvFactory {
 	public Motion createMotion() {
 		MotionImpl motion = new MotionImpl();
 		return motion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Sensors createSensors() {
-		SensorsImpl sensors = new SensorsImpl();
-		return sensors;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Ir createIr() {
-		IrImpl ir = new IrImpl();
-		return ir;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Ultrasonic createUltrasonic() {
-		UltrasonicImpl ultrasonic = new UltrasonicImpl();
-		return ultrasonic;
 	}
 
 	/**

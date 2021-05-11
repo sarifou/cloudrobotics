@@ -3,7 +3,8 @@ Bundle-ManifestVersion: 2
 Bundle-Name: omcri4cp.agv.connector
 Bundle-SymbolicName: omcri4cp.agv.connector;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-ClassPath: .
+Bundle-ClassPath: .,
+ lib/jrosbridge.jar
 Bundle-Vendor: OCCIware
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

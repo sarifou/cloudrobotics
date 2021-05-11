@@ -27,8 +27,8 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link omcri4cp.agv.Motion#getDuration <em>Duration</em>}</li>
  *   <li>{@link omcri4cp.agv.Motion#getSpeed <em>Speed</em>}</li>
+ *   <li>{@link omcri4cp.agv.Motion#getDuration <em>Duration</em>}</li>
  *   <li>{@link omcri4cp.agv.Motion#getAngle <em>Angle</em>}</li>
  * </ul>
  *
@@ -37,31 +37,6 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  * @generated
  */
 public interface Motion extends MixinBase {
-	/**
-	 * Returns the value of the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Duration</em>' attribute.
-	 * @see #setDuration(int)
-	 * @see omcri4cp.agv.AgvPackage#getMotion_Duration()
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!duration'"
-	 * @generated
-	 */
-	int getDuration();
-
-	/**
-	 * Sets the value of the '{@link omcri4cp.agv.Motion#getDuration <em>Duration</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Duration</em>' attribute.
-	 * @see #getDuration()
-	 * @generated
-	 */
-	void setDuration(int value);
-
 	/**
 	 * Returns the value of the '<em><b>Speed</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -86,6 +61,31 @@ public interface Motion extends MixinBase {
 	 * @generated
 	 */
 	void setSpeed(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Duration</em>' attribute.
+	 * @see #setDuration(int)
+	 * @see omcri4cp.agv.AgvPackage#getMotion_Duration()
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!duration'"
+	 * @generated
+	 */
+	int getDuration();
+
+	/**
+	 * Sets the value of the '{@link omcri4cp.agv.Motion#getDuration <em>Duration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Duration</em>' attribute.
+	 * @see #getDuration()
+	 * @generated
+	 */
+	void setDuration(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Angle</b></em>' attribute.
@@ -140,10 +140,10 @@ public interface Motion extends MixinBase {
 	 * <!-- begin-model-doc -->
 	 * 
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!left()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!left_translation()'"
 	 * @generated
 	 */
-	void left();
+	void left_translation();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,10 +151,32 @@ public interface Motion extends MixinBase {
 	 * <!-- begin-model-doc -->
 	 * 
 	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!right()'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!right_translation()'"
 	 * @generated
 	 */
-	void right();
+	void right_translation();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 
+	 * <!-- end-model-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!turn_left()'"
+	 * @generated
+	 */
+	void turn_left();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 
+	 * <!-- end-model-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!turn_right()'"
+	 * @generated
+	 */
+	void turn_right();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,28 +221,6 @@ public interface Motion extends MixinBase {
 	 * @generated
 	 */
 	void right_diago_backward();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!turn_left()'"
-	 * @generated
-	 */
-	void turn_left();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * <!-- end-model-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!turn_right()'"
-	 * @generated
-	 */
-	void turn_right();
 
 	/**
 	 * <!-- begin-user-doc -->

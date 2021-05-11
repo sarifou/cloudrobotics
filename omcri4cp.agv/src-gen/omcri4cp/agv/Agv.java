@@ -28,8 +28,8 @@ import org.eclipse.cmf.occi.core.Resource;
  * </p>
  * <ul>
  *   <li>{@link omcri4cp.agv.Agv#getUser <em>User</em>}</li>
- *   <li>{@link omcri4cp.agv.Agv#getPassword <em>Password</em>}</li>
  *   <li>{@link omcri4cp.agv.Agv#getIpAddress <em>Ip Address</em>}</li>
+ *   <li>{@link omcri4cp.agv.Agv#getPassword <em>Password</em>}</li>
  * </ul>
  *
  * @see omcri4cp.agv.AgvPackage#getAgv()
@@ -64,32 +64,6 @@ public interface Agv extends Resource {
 	void setUser(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Password</em>' attribute.
-	 * @see #setPassword(String)
-	 * @see omcri4cp.agv.AgvPackage#getAgv_Password()
-	 * @model required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Agv!password'"
-	 * @generated
-	 */
-	String getPassword();
-
-	/**
-	 * Sets the value of the '{@link omcri4cp.agv.Agv#getPassword <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Password</em>' attribute.
-	 * @see #getPassword()
-	 * @generated
-	 */
-	void setPassword(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Ip Address</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,5 +88,31 @@ public interface Agv extends Resource {
 	 * @generated
 	 */
 	void setIpAddress(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Password</em>' attribute.
+	 * @see #setPassword(String)
+	 * @see omcri4cp.agv.AgvPackage#getAgv_Password()
+	 * @model required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Agv!password'"
+	 * @generated
+	 */
+	String getPassword();
+
+	/**
+	 * Sets the value of the '{@link omcri4cp.agv.Agv#getPassword <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Password</em>' attribute.
+	 * @see #getPassword()
+	 * @generated
+	 */
+	void setPassword(String value);
 
 } // Agv

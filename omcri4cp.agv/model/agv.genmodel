@@ -12,19 +12,19 @@
         <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Agv/user"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Agv/password"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Agv/ipAddress"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Agv/ipAddress"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Agv/password"/>
       </genFeatures>
     </genClasses>
     <genClasses>
       <ecoreClass href="agv.ecore#//Motion"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Motion/duration"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Motion/speed"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Motion/speed"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Motion/duration"/>
       </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Motion/angle"/>
@@ -36,10 +36,16 @@
         <ecoreOperation href="agv.ecore#//Motion/move_backward"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="agv.ecore#//Motion/left"/>
+        <ecoreOperation href="agv.ecore#//Motion/left_translation"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="agv.ecore#//Motion/right"/>
+        <ecoreOperation href="agv.ecore#//Motion/right_translation"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="agv.ecore#//Motion/turn_left"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="agv.ecore#//Motion/turn_right"/>
       </genOperations>
       <genOperations>
         <ecoreOperation href="agv.ecore#//Motion/left_diago_forward"/>
@@ -54,31 +60,7 @@
         <ecoreOperation href="agv.ecore#//Motion/right_diago_backward"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="agv.ecore#//Motion/turn_left"/>
-      </genOperations>
-      <genOperations>
-        <ecoreOperation href="agv.ecore#//Motion/turn_right"/>
-      </genOperations>
-      <genOperations>
         <ecoreOperation href="agv.ecore#//Motion/stop"/>
-      </genOperations>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="agv.ecore#//Sensors"/>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="agv.ecore#//Ir"/>
-      <genOperations>
-        <ecoreOperation href="agv.ecore#//Ir/sense_line"/>
-      </genOperations>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="agv.ecore#//Ultrasonic"/>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="agv.ecore#//Ultrasonic/distance"/>
-      </genFeatures>
-      <genOperations>
-        <ecoreOperation href="agv.ecore#//Ultrasonic/sense_distance"/>
       </genOperations>
     </genClasses>
   </genPackages>

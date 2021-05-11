@@ -58,34 +58,14 @@ import org.eclipse.ocl.pivot.values.IntegerValue;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link omcri4cp.agv.impl.MotionImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link omcri4cp.agv.impl.MotionImpl#getSpeed <em>Speed</em>}</li>
+ *   <li>{@link omcri4cp.agv.impl.MotionImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link omcri4cp.agv.impl.MotionImpl#getAngle <em>Angle</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MotionImpl extends MixinBaseImpl implements Motion {
-	/**
-	 * The default value of the '{@link #getDuration() <em>Duration</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDuration()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int DURATION_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getDuration() <em>Duration</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDuration()
-	 * @generated
-	 * @ordered
-	 */
-	protected int duration = DURATION_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getSpeed() <em>Speed</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -105,6 +85,26 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	 * @ordered
 	 */
 	protected int speed = SPEED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDuration() <em>Duration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDuration()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int DURATION_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getDuration() <em>Duration</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDuration()
+	 * @generated
+	 * @ordered
+	 */
+	protected int duration = DURATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAngle() <em>Angle</em>}' attribute.
@@ -150,27 +150,6 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getDuration() {
-		return duration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDuration(int newDuration) {
-		int oldDuration = duration;
-		duration = newDuration;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AgvPackage.MOTION__DURATION, oldDuration, duration));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getSpeed() {
 		return speed;
 	}
@@ -185,6 +164,27 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 		speed = newSpeed;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AgvPackage.MOTION__SPEED, oldSpeed, speed));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getDuration() {
+		return duration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDuration(int newDuration) {
+		int oldDuration = duration;
+		duration = newDuration;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AgvPackage.MOTION__DURATION, oldDuration, duration));
 	}
 
 	/**
@@ -231,8 +231,8 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void left() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!left()
+	public void left_translation() {
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!left_translation()
 	}
 
 	/**
@@ -240,8 +240,26 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void right() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!right()
+	public void right_translation() {
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!right_translation()
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void turn_left() {
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!turn_left()
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void turn_right() {
+		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!turn_right()
 	}
 
 	/**
@@ -278,24 +296,6 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	 */
 	public void right_diago_backward() {
 		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!right_diago_backward()
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void turn_left() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!turn_left()
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void turn_right() {
-		throw new UnsupportedOperationException();  // FIXME Unimplemented http://cristal.org/omcri4cp/agv/ecore!Motion!turn_right()
 	}
 
 	/**
@@ -352,10 +352,10 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AgvPackage.MOTION__DURATION:
-				return getDuration();
 			case AgvPackage.MOTION__SPEED:
 				return getSpeed();
+			case AgvPackage.MOTION__DURATION:
+				return getDuration();
 			case AgvPackage.MOTION__ANGLE:
 				return getAngle();
 		}
@@ -370,11 +370,11 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AgvPackage.MOTION__DURATION:
-				setDuration((Integer)newValue);
-				return;
 			case AgvPackage.MOTION__SPEED:
 				setSpeed((Integer)newValue);
+				return;
+			case AgvPackage.MOTION__DURATION:
+				setDuration((Integer)newValue);
 				return;
 			case AgvPackage.MOTION__ANGLE:
 				setAngle((Integer)newValue);
@@ -391,11 +391,11 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AgvPackage.MOTION__DURATION:
-				setDuration(DURATION_EDEFAULT);
-				return;
 			case AgvPackage.MOTION__SPEED:
 				setSpeed(SPEED_EDEFAULT);
+				return;
+			case AgvPackage.MOTION__DURATION:
+				setDuration(DURATION_EDEFAULT);
 				return;
 			case AgvPackage.MOTION__ANGLE:
 				setAngle(ANGLE_EDEFAULT);
@@ -412,10 +412,10 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AgvPackage.MOTION__DURATION:
-				return duration != DURATION_EDEFAULT;
 			case AgvPackage.MOTION__SPEED:
 				return speed != SPEED_EDEFAULT;
+			case AgvPackage.MOTION__DURATION:
+				return duration != DURATION_EDEFAULT;
 			case AgvPackage.MOTION__ANGLE:
 				return angle != ANGLE_EDEFAULT;
 		}
@@ -437,11 +437,17 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 			case AgvPackage.MOTION___MOVE_BACKWARD:
 				move_backward();
 				return null;
-			case AgvPackage.MOTION___LEFT:
-				left();
+			case AgvPackage.MOTION___LEFT_TRANSLATION:
+				left_translation();
 				return null;
-			case AgvPackage.MOTION___RIGHT:
-				right();
+			case AgvPackage.MOTION___RIGHT_TRANSLATION:
+				right_translation();
+				return null;
+			case AgvPackage.MOTION___TURN_LEFT:
+				turn_left();
+				return null;
+			case AgvPackage.MOTION___TURN_RIGHT:
+				turn_right();
 				return null;
 			case AgvPackage.MOTION___LEFT_DIAGO_FORWARD:
 				left_diago_forward();
@@ -454,12 +460,6 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 				return null;
 			case AgvPackage.MOTION___RIGHT_DIAGO_BACKWARD:
 				right_diago_backward();
-				return null;
-			case AgvPackage.MOTION___TURN_LEFT:
-				turn_left();
-				return null;
-			case AgvPackage.MOTION___TURN_RIGHT:
-				turn_right();
 				return null;
 			case AgvPackage.MOTION___STOP:
 				stop();
@@ -480,10 +480,10 @@ public class MotionImpl extends MixinBaseImpl implements Motion {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (duration: ");
-		result.append(duration);
-		result.append(", speed: ");
+		result.append(" (speed: ");
 		result.append(speed);
+		result.append(", duration: ");
+		result.append(duration);
 		result.append(", angle: ");
 		result.append(angle);
 		result.append(')');

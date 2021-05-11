@@ -178,22 +178,22 @@ public interface AgvPackage extends EPackage {
 	int AGV__USER = OCCIPackage.RESOURCE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGV__PASSWORD = OCCIPackage.RESOURCE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Ip Address</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGV__IP_ADDRESS = OCCIPackage.RESOURCE_FEATURE_COUNT + 2;
+	int AGV__IP_ADDRESS = OCCIPackage.RESOURCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGV__PASSWORD = OCCIPackage.RESOURCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Agv</em>' class.
@@ -287,22 +287,22 @@ public interface AgvPackage extends EPackage {
 	int MOTION__ATTRIBUTES = OCCIPackage.MIXIN_BASE__ATTRIBUTES;
 
 	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOTION__DURATION = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Speed</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOTION__SPEED = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 1;
+	int MOTION__SPEED = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTION__DURATION = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Angle</b></em>' attribute.
@@ -341,58 +341,22 @@ public interface AgvPackage extends EPackage {
 	int MOTION___MOVE_BACKWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Left</em>' operation.
+	 * The operation id for the '<em>Left translation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOTION___LEFT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 2;
+	int MOTION___LEFT_TRANSLATION = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Right</em>' operation.
+	 * The operation id for the '<em>Right translation</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOTION___RIGHT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Left diago forward</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOTION___LEFT_DIAGO_FORWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Left diago backward</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOTION___LEFT_DIAGO_BACKWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Right diago forward</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOTION___RIGHT_DIAGO_FORWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>Right diago backward</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MOTION___RIGHT_DIAGO_BACKWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 7;
+	int MOTION___RIGHT_TRANSLATION = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Turn left</em>' operation.
@@ -401,7 +365,7 @@ public interface AgvPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOTION___TURN_LEFT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 8;
+	int MOTION___TURN_LEFT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Turn right</em>' operation.
@@ -410,7 +374,43 @@ public interface AgvPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MOTION___TURN_RIGHT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 9;
+	int MOTION___TURN_RIGHT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Left diago forward</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTION___LEFT_DIAGO_FORWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Left diago backward</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTION___LEFT_DIAGO_BACKWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Right diago forward</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTION___RIGHT_DIAGO_FORWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Right diago backward</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTION___RIGHT_DIAGO_BACKWARD = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Stop</em>' operation.
@@ -439,225 +439,6 @@ public interface AgvPackage extends EPackage {
 	 */
 	int MOTION_OPERATION_COUNT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 12;
 
-	/**
-	 * The meta object id for the '{@link omcri4cp.agv.impl.SensorsImpl <em>Sensors</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see omcri4cp.agv.impl.SensorsImpl
-	 * @see omcri4cp.agv.impl.AgvPackageImpl#getSensors()
-	 * @generated
-	 */
-	int SENSORS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSORS__MIXIN = OCCIPackage.MIXIN_BASE__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSORS__ENTITY = OCCIPackage.MIXIN_BASE__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSORS__ATTRIBUTES = OCCIPackage.MIXIN_BASE__ATTRIBUTES;
-
-	/**
-	 * The number of structural features of the '<em>Sensors</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSORS_FEATURE_COUNT = OCCIPackage.MIXIN_BASE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Applies Constraint</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSORS___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Sensors</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSORS_OPERATION_COUNT = OCCIPackage.MIXIN_BASE_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link omcri4cp.agv.impl.IrImpl <em>Ir</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see omcri4cp.agv.impl.IrImpl
-	 * @see omcri4cp.agv.impl.AgvPackageImpl#getIr()
-	 * @generated
-	 */
-	int IR = 3;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IR__MIXIN = SENSORS__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IR__ENTITY = SENSORS__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IR__ATTRIBUTES = SENSORS__ATTRIBUTES;
-
-	/**
-	 * The number of structural features of the '<em>Ir</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IR_FEATURE_COUNT = SENSORS_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Applies Constraint</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IR___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = SENSORS___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>Sense line</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IR___SENSE_LINE = SENSORS_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Ir</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IR_OPERATION_COUNT = SENSORS_OPERATION_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link omcri4cp.agv.impl.UltrasonicImpl <em>Ultrasonic</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see omcri4cp.agv.impl.UltrasonicImpl
-	 * @see omcri4cp.agv.impl.AgvPackageImpl#getUltrasonic()
-	 * @generated
-	 */
-	int ULTRASONIC = 4;
-
-	/**
-	 * The feature id for the '<em><b>Mixin</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ULTRASONIC__MIXIN = SENSORS__MIXIN;
-
-	/**
-	 * The feature id for the '<em><b>Entity</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ULTRASONIC__ENTITY = SENSORS__ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ULTRASONIC__ATTRIBUTES = SENSORS__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Distance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ULTRASONIC__DISTANCE = SENSORS_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Ultrasonic</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ULTRASONIC_FEATURE_COUNT = SENSORS_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Applies Constraint</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ULTRASONIC___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = SENSORS___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP;
-
-	/**
-	 * The operation id for the '<em>Sense distance</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ULTRASONIC___SENSE_DISTANCE = SENSORS_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Ultrasonic</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ULTRASONIC_OPERATION_COUNT = SENSORS_OPERATION_COUNT + 1;
-
 
 	/**
 	 * Returns the meta object for class '{@link omcri4cp.agv.Agv <em>Agv</em>}'.
@@ -681,17 +462,6 @@ public interface AgvPackage extends EPackage {
 	EAttribute getAgv_User();
 
 	/**
-	 * Returns the meta object for the attribute '{@link omcri4cp.agv.Agv#getPassword <em>Password</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Password</em>'.
-	 * @see omcri4cp.agv.Agv#getPassword()
-	 * @see #getAgv()
-	 * @generated
-	 */
-	EAttribute getAgv_Password();
-
-	/**
 	 * Returns the meta object for the attribute '{@link omcri4cp.agv.Agv#getIpAddress <em>Ip Address</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -701,6 +471,17 @@ public interface AgvPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAgv_IpAddress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link omcri4cp.agv.Agv#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see omcri4cp.agv.Agv#getPassword()
+	 * @see #getAgv()
+	 * @generated
+	 */
+	EAttribute getAgv_Password();
 
 	/**
 	 * Returns the meta object for class '{@link omcri4cp.agv.Motion <em>Motion</em>}'.
@@ -713,17 +494,6 @@ public interface AgvPackage extends EPackage {
 	EClass getMotion();
 
 	/**
-	 * Returns the meta object for the attribute '{@link omcri4cp.agv.Motion#getDuration <em>Duration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Duration</em>'.
-	 * @see omcri4cp.agv.Motion#getDuration()
-	 * @see #getMotion()
-	 * @generated
-	 */
-	EAttribute getMotion_Duration();
-
-	/**
 	 * Returns the meta object for the attribute '{@link omcri4cp.agv.Motion#getSpeed <em>Speed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -733,6 +503,17 @@ public interface AgvPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMotion_Speed();
+
+	/**
+	 * Returns the meta object for the attribute '{@link omcri4cp.agv.Motion#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see omcri4cp.agv.Motion#getDuration()
+	 * @see #getMotion()
+	 * @generated
+	 */
+	EAttribute getMotion_Duration();
 
 	/**
 	 * Returns the meta object for the attribute '{@link omcri4cp.agv.Motion#getAngle <em>Angle</em>}'.
@@ -766,24 +547,44 @@ public interface AgvPackage extends EPackage {
 	EOperation getMotion__Move_backward();
 
 	/**
-	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#left() <em>Left</em>}' operation.
+	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#left_translation() <em>Left translation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Left</em>' operation.
-	 * @see omcri4cp.agv.Motion#left()
+	 * @return the meta object for the '<em>Left translation</em>' operation.
+	 * @see omcri4cp.agv.Motion#left_translation()
 	 * @generated
 	 */
-	EOperation getMotion__Left();
+	EOperation getMotion__Left_translation();
 
 	/**
-	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#right() <em>Right</em>}' operation.
+	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#right_translation() <em>Right translation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Right</em>' operation.
-	 * @see omcri4cp.agv.Motion#right()
+	 * @return the meta object for the '<em>Right translation</em>' operation.
+	 * @see omcri4cp.agv.Motion#right_translation()
 	 * @generated
 	 */
-	EOperation getMotion__Right();
+	EOperation getMotion__Right_translation();
+
+	/**
+	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#turn_left() <em>Turn left</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Turn left</em>' operation.
+	 * @see omcri4cp.agv.Motion#turn_left()
+	 * @generated
+	 */
+	EOperation getMotion__Turn_left();
+
+	/**
+	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#turn_right() <em>Turn right</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Turn right</em>' operation.
+	 * @see omcri4cp.agv.Motion#turn_right()
+	 * @generated
+	 */
+	EOperation getMotion__Turn_right();
 
 	/**
 	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#left_diago_forward() <em>Left diago forward</em>}' operation.
@@ -826,26 +627,6 @@ public interface AgvPackage extends EPackage {
 	EOperation getMotion__Right_diago_backward();
 
 	/**
-	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#turn_left() <em>Turn left</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Turn left</em>' operation.
-	 * @see omcri4cp.agv.Motion#turn_left()
-	 * @generated
-	 */
-	EOperation getMotion__Turn_left();
-
-	/**
-	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#turn_right() <em>Turn right</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Turn right</em>' operation.
-	 * @see omcri4cp.agv.Motion#turn_right()
-	 * @generated
-	 */
-	EOperation getMotion__Turn_right();
-
-	/**
 	 * Returns the meta object for the '{@link omcri4cp.agv.Motion#stop() <em>Stop</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -864,77 +645,6 @@ public interface AgvPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getMotion__AppliesConstraint__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for class '{@link omcri4cp.agv.Sensors <em>Sensors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sensors</em>'.
-	 * @see omcri4cp.agv.Sensors
-	 * @generated
-	 */
-	EClass getSensors();
-
-	/**
-	 * Returns the meta object for the '{@link omcri4cp.agv.Sensors#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Applies Constraint</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Applies Constraint</em>' operation.
-	 * @see omcri4cp.agv.Sensors#appliesConstraint(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
-	 * @generated
-	 */
-	EOperation getSensors__AppliesConstraint__DiagnosticChain_Map();
-
-	/**
-	 * Returns the meta object for class '{@link omcri4cp.agv.Ir <em>Ir</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ir</em>'.
-	 * @see omcri4cp.agv.Ir
-	 * @generated
-	 */
-	EClass getIr();
-
-	/**
-	 * Returns the meta object for the '{@link omcri4cp.agv.Ir#sense_line() <em>Sense line</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Sense line</em>' operation.
-	 * @see omcri4cp.agv.Ir#sense_line()
-	 * @generated
-	 */
-	EOperation getIr__Sense_line();
-
-	/**
-	 * Returns the meta object for class '{@link omcri4cp.agv.Ultrasonic <em>Ultrasonic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ultrasonic</em>'.
-	 * @see omcri4cp.agv.Ultrasonic
-	 * @generated
-	 */
-	EClass getUltrasonic();
-
-	/**
-	 * Returns the meta object for the attribute '{@link omcri4cp.agv.Ultrasonic#getDistance <em>Distance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Distance</em>'.
-	 * @see omcri4cp.agv.Ultrasonic#getDistance()
-	 * @see #getUltrasonic()
-	 * @generated
-	 */
-	EAttribute getUltrasonic_Distance();
-
-	/**
-	 * Returns the meta object for the '{@link omcri4cp.agv.Ultrasonic#sense_distance() <em>Sense distance</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Sense distance</em>' operation.
-	 * @see omcri4cp.agv.Ultrasonic#sense_distance()
-	 * @generated
-	 */
-	EOperation getUltrasonic__Sense_distance();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -978,20 +688,20 @@ public interface AgvPackage extends EPackage {
 		EAttribute AGV__USER = eINSTANCE.getAgv_User();
 
 		/**
-		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute AGV__PASSWORD = eINSTANCE.getAgv_Password();
-
-		/**
 		 * The meta object literal for the '<em><b>Ip Address</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute AGV__IP_ADDRESS = eINSTANCE.getAgv_IpAddress();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AGV__PASSWORD = eINSTANCE.getAgv_Password();
 
 		/**
 		 * The meta object literal for the '{@link omcri4cp.agv.impl.MotionImpl <em>Motion</em>}' class.
@@ -1004,20 +714,20 @@ public interface AgvPackage extends EPackage {
 		EClass MOTION = eINSTANCE.getMotion();
 
 		/**
-		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MOTION__DURATION = eINSTANCE.getMotion_Duration();
-
-		/**
 		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute MOTION__SPEED = eINSTANCE.getMotion_Speed();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOTION__DURATION = eINSTANCE.getMotion_Duration();
 
 		/**
 		 * The meta object literal for the '<em><b>Angle</b></em>' attribute feature.
@@ -1044,20 +754,36 @@ public interface AgvPackage extends EPackage {
 		EOperation MOTION___MOVE_BACKWARD = eINSTANCE.getMotion__Move_backward();
 
 		/**
-		 * The meta object literal for the '<em><b>Left</b></em>' operation.
+		 * The meta object literal for the '<em><b>Left translation</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation MOTION___LEFT = eINSTANCE.getMotion__Left();
+		EOperation MOTION___LEFT_TRANSLATION = eINSTANCE.getMotion__Left_translation();
 
 		/**
-		 * The meta object literal for the '<em><b>Right</b></em>' operation.
+		 * The meta object literal for the '<em><b>Right translation</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation MOTION___RIGHT = eINSTANCE.getMotion__Right();
+		EOperation MOTION___RIGHT_TRANSLATION = eINSTANCE.getMotion__Right_translation();
+
+		/**
+		 * The meta object literal for the '<em><b>Turn left</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOTION___TURN_LEFT = eINSTANCE.getMotion__Turn_left();
+
+		/**
+		 * The meta object literal for the '<em><b>Turn right</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MOTION___TURN_RIGHT = eINSTANCE.getMotion__Turn_right();
 
 		/**
 		 * The meta object literal for the '<em><b>Left diago forward</b></em>' operation.
@@ -1092,22 +818,6 @@ public interface AgvPackage extends EPackage {
 		EOperation MOTION___RIGHT_DIAGO_BACKWARD = eINSTANCE.getMotion__Right_diago_backward();
 
 		/**
-		 * The meta object literal for the '<em><b>Turn left</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MOTION___TURN_LEFT = eINSTANCE.getMotion__Turn_left();
-
-		/**
-		 * The meta object literal for the '<em><b>Turn right</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation MOTION___TURN_RIGHT = eINSTANCE.getMotion__Turn_right();
-
-		/**
 		 * The meta object literal for the '<em><b>Stop</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1122,68 +832,6 @@ public interface AgvPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation MOTION___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getMotion__AppliesConstraint__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '{@link omcri4cp.agv.impl.SensorsImpl <em>Sensors</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see omcri4cp.agv.impl.SensorsImpl
-		 * @see omcri4cp.agv.impl.AgvPackageImpl#getSensors()
-		 * @generated
-		 */
-		EClass SENSORS = eINSTANCE.getSensors();
-
-		/**
-		 * The meta object literal for the '<em><b>Applies Constraint</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SENSORS___APPLIES_CONSTRAINT__DIAGNOSTICCHAIN_MAP = eINSTANCE.getSensors__AppliesConstraint__DiagnosticChain_Map();
-
-		/**
-		 * The meta object literal for the '{@link omcri4cp.agv.impl.IrImpl <em>Ir</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see omcri4cp.agv.impl.IrImpl
-		 * @see omcri4cp.agv.impl.AgvPackageImpl#getIr()
-		 * @generated
-		 */
-		EClass IR = eINSTANCE.getIr();
-
-		/**
-		 * The meta object literal for the '<em><b>Sense line</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IR___SENSE_LINE = eINSTANCE.getIr__Sense_line();
-
-		/**
-		 * The meta object literal for the '{@link omcri4cp.agv.impl.UltrasonicImpl <em>Ultrasonic</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see omcri4cp.agv.impl.UltrasonicImpl
-		 * @see omcri4cp.agv.impl.AgvPackageImpl#getUltrasonic()
-		 * @generated
-		 */
-		EClass ULTRASONIC = eINSTANCE.getUltrasonic();
-
-		/**
-		 * The meta object literal for the '<em><b>Distance</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ULTRASONIC__DISTANCE = eINSTANCE.getUltrasonic_Distance();
-
-		/**
-		 * The meta object literal for the '<em><b>Sense distance</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ULTRASONIC___SENSE_DISTANCE = eINSTANCE.getUltrasonic__Sense_distance();
 
 	}
 

@@ -32,8 +32,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link omcri4cp.agv.impl.AgvImpl#getUser <em>User</em>}</li>
- *   <li>{@link omcri4cp.agv.impl.AgvImpl#getPassword <em>Password</em>}</li>
  *   <li>{@link omcri4cp.agv.impl.AgvImpl#getIpAddress <em>Ip Address</em>}</li>
+ *   <li>{@link omcri4cp.agv.impl.AgvImpl#getPassword <em>Password</em>}</li>
  * </ul>
  *
  * @generated
@@ -60,26 +60,6 @@ public class AgvImpl extends ResourceImpl implements Agv {
 	protected String user = USER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPassword() <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPassword()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PASSWORD_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPassword()
-	 * @generated
-	 * @ordered
-	 */
-	protected String password = PASSWORD_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getIpAddress() <em>Ip Address</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,6 +78,26 @@ public class AgvImpl extends ResourceImpl implements Agv {
 	 * @ordered
 	 */
 	protected String ipAddress = IP_ADDRESS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPassword() <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPassword()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PASSWORD_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPassword()
+	 * @generated
+	 * @ordered
+	 */
+	protected String password = PASSWORD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -144,27 +144,6 @@ public class AgvImpl extends ResourceImpl implements Agv {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPassword() {
-		return password;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPassword(String newPassword) {
-		String oldPassword = password;
-		password = newPassword;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AgvPackage.AGV__PASSWORD, oldPassword, password));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getIpAddress() {
 		return ipAddress;
 	}
@@ -186,15 +165,36 @@ public class AgvImpl extends ResourceImpl implements Agv {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPassword(String newPassword) {
+		String oldPassword = password;
+		password = newPassword;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AgvPackage.AGV__PASSWORD, oldPassword, password));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case AgvPackage.AGV__USER:
 				return getUser();
-			case AgvPackage.AGV__PASSWORD:
-				return getPassword();
 			case AgvPackage.AGV__IP_ADDRESS:
 				return getIpAddress();
+			case AgvPackage.AGV__PASSWORD:
+				return getPassword();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,11 +210,11 @@ public class AgvImpl extends ResourceImpl implements Agv {
 			case AgvPackage.AGV__USER:
 				setUser((String)newValue);
 				return;
-			case AgvPackage.AGV__PASSWORD:
-				setPassword((String)newValue);
-				return;
 			case AgvPackage.AGV__IP_ADDRESS:
 				setIpAddress((String)newValue);
+				return;
+			case AgvPackage.AGV__PASSWORD:
+				setPassword((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -231,11 +231,11 @@ public class AgvImpl extends ResourceImpl implements Agv {
 			case AgvPackage.AGV__USER:
 				setUser(USER_EDEFAULT);
 				return;
-			case AgvPackage.AGV__PASSWORD:
-				setPassword(PASSWORD_EDEFAULT);
-				return;
 			case AgvPackage.AGV__IP_ADDRESS:
 				setIpAddress(IP_ADDRESS_EDEFAULT);
+				return;
+			case AgvPackage.AGV__PASSWORD:
+				setPassword(PASSWORD_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -251,10 +251,10 @@ public class AgvImpl extends ResourceImpl implements Agv {
 		switch (featureID) {
 			case AgvPackage.AGV__USER:
 				return USER_EDEFAULT == null ? user != null : !USER_EDEFAULT.equals(user);
-			case AgvPackage.AGV__PASSWORD:
-				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 			case AgvPackage.AGV__IP_ADDRESS:
 				return IP_ADDRESS_EDEFAULT == null ? ipAddress != null : !IP_ADDRESS_EDEFAULT.equals(ipAddress);
+			case AgvPackage.AGV__PASSWORD:
+				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -271,10 +271,10 @@ public class AgvImpl extends ResourceImpl implements Agv {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (user: ");
 		result.append(user);
-		result.append(", password: ");
-		result.append(password);
 		result.append(", ipAddress: ");
 		result.append(ipAddress);
+		result.append(", password: ");
+		result.append(password);
 		result.append(')');
 		return result.toString();
 	}

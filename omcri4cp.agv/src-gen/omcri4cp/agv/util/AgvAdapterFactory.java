@@ -90,18 +90,6 @@ public class AgvAdapterFactory extends AdapterFactoryImpl {
 				return createMotionAdapter();
 			}
 			@Override
-			public Adapter caseSensors(Sensors object) {
-				return createSensorsAdapter();
-			}
-			@Override
-			public Adapter caseIr(Ir object) {
-				return createIrAdapter();
-			}
-			@Override
-			public Adapter caseUltrasonic(Ultrasonic object) {
-				return createUltrasonicAdapter();
-			}
-			@Override
 			public Adapter caseEntity(Entity object) {
 				return createEntityAdapter();
 			}
@@ -158,48 +146,6 @@ public class AgvAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMotionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link omcri4cp.agv.Sensors <em>Sensors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see omcri4cp.agv.Sensors
-	 * @generated
-	 */
-	public Adapter createSensorsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link omcri4cp.agv.Ir <em>Ir</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see omcri4cp.agv.Ir
-	 * @generated
-	 */
-	public Adapter createIrAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link omcri4cp.agv.Ultrasonic <em>Ultrasonic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see omcri4cp.agv.Ultrasonic
-	 * @generated
-	 */
-	public Adapter createUltrasonicAdapter() {
 		return null;
 	}
 
