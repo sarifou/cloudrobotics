@@ -17,6 +17,8 @@ package omcri4cp.crane.connector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import edu.wpi.rail.jrosbridge.Ros;
+
 
 
 /**
@@ -32,7 +34,7 @@ public class CraneConnector extends omcri4cp.crane.impl.CraneImpl
 	 */
 	private static Logger LOGGER = LoggerFactory.getLogger(CraneConnector.class);
 
-	// Start of user code Craneconnector_constructor
+	private static Ros ros ;
 	/**
 	 * Constructs a crane connector.
 	 */
@@ -54,7 +56,13 @@ public class CraneConnector extends omcri4cp.crane.impl.CraneImpl
 	public void occiCreate()
 	{
 		LOGGER.debug("occiCreate() called on " + this);
-		// TODO: Implement this callback or remove this method.
+		
+		try {
+			ros = new Ros(address);
+			ros.connect();
+		} catch(Exception e) {
+			LOGGER.error("Cannot connet crane");
+		}
 	}
 	// End of user code
 

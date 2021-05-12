@@ -51,7 +51,7 @@ public class MotionConnector extends omcri4cp.train.impl.MotionImpl
 			TrainConnector.train.faster();
 			speed += 1;
 			System.out.println(TrainConnector.train.getResponse());
-		}catch (Exception e) {
+		}catch (IOException e) {
 			LOGGER.error("");
 		}
 	}

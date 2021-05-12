@@ -4,7 +4,8 @@ Bundle-Name: omcri4cp.train.connector
 Bundle-SymbolicName: omcri4cp.train.connector;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .,
- lib/train.jar
+ lib/train.jar,
+ lib/jrosbridge.jar
 Bundle-Vendor: OCCIware
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

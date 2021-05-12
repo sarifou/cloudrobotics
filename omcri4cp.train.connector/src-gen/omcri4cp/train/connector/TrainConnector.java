@@ -17,6 +17,7 @@ package omcri4cp.train.connector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import edu.wpi.rail.jrosbridge.Ros;
 import train.controller.Train;
 
 
@@ -34,6 +35,8 @@ public class TrainConnector extends omcri4cp.train.impl.TrainImpl
 	private static Logger LOGGER = LoggerFactory.getLogger(TrainConnector.class);
 
 	public static Train train ;
+	
+	public static Ros ros;
 	/**
 	 * Constructs a train connector.
 	 */
@@ -58,6 +61,8 @@ public class TrainConnector extends omcri4cp.train.impl.TrainImpl
 		
 		try {
 			train = new Train(ipAddress, port, trainAddress);
+			ros = new Ros(ipAddress);
+			ros.connect();
 		} catch (Exception e) {
 			LOGGER.error("Cannot create train" );
 		}

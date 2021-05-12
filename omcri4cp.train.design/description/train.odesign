@@ -105,6 +105,21 @@
 		              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
 		            </style>
 		</subContainerMappings>
+			<subContainerMappings name="MotionMixin" preconditionExpression="[self.oclIsTypeOf(train::Motion)/]" semanticCandidatesExpression="feature:parts" domainClass="train::Motion" childrenPresentation="List">
+			<subNodeMappings name="Motionspeed" semanticCandidatesExpression="[self/]" domainClass="train::Motion">
+			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['speed = ' + self.speed.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
+			                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              </style>
+			            </subNodeMappings>
+			<style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[self.mixin.name/]">
+			              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+			              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+			              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+			            </style>
+			          </subContainerMappings>
 			<subContainerMappings name="AccessoriesMixin" preconditionExpression="[self.oclIsTypeOf(train::Accessories)/]" semanticCandidatesExpression="feature:parts" domainClass="train::Accessories" childrenPresentation="List">
 			<subNodeMappings name="Accessoriesklaxon" semanticCandidatesExpression="[self/]" domainClass="train::Accessories">
 			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['klaxon = ' + self.klaxon.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
@@ -129,21 +144,6 @@
 			            </subNodeMappings>
 			<subNodeMappings name="AccessorieswagonNoise" semanticCandidatesExpression="[self/]" domainClass="train::Accessories">
 			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['wagonNoise = ' + self.wagonNoise.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
-			                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-			                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-			                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-			              </style>
-			            </subNodeMappings>
-			<style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[self.mixin.name/]">
-			              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-			              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-			              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-			              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-			            </style>
-			          </subContainerMappings>
-			<subContainerMappings name="MotionMixin" preconditionExpression="[self.oclIsTypeOf(train::Motion)/]" semanticCandidatesExpression="feature:parts" domainClass="train::Motion" childrenPresentation="List">
-			<subNodeMappings name="Motionspeed" semanticCandidatesExpression="[self/]" domainClass="train::Motion">
-			              <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="['speed = ' + self.speed.toString()/]" labelAlignment="LEFT" hideLabelByDefault="true" resizeKind="NSEW">
 			                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
 			                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
 			                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -223,92 +223,6 @@
 		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="title" valueExpression="var:arg0"/>
 		              </initialOperation>
 		            </ownedTools>
-		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesKlaxon" inputLabelExpression="feature:klaxon">
-		              <mask mask="{0}"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="klaxon" valueExpression="var:arg0"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesLight" inputLabelExpression="feature:light">
-		              <mask mask="{0}"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="light" valueExpression="var:arg0"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesTrainNoise" inputLabelExpression="feature:trainNoise">
-		              <mask mask="{0}"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="trainNoise" valueExpression="var:arg0"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesWagonNoise" inputLabelExpression="feature:wagonNoise">
-		              <mask mask="{0}"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="wagonNoise" valueExpression="var:arg0"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetKlaxonAction" label="SetKlaxon" precondition="[self.oclIsKindOf(train::Accessories)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setklaxon()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetlightAction" label="Setlight" precondition="[self.oclIsKindOf(train::Accessories)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setlight()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSettrainnoiseAction" label="Settrainnoise" precondition="[self.oclIsKindOf(train::Accessories)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).settrainnoise()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetwagonnoiseAction" label="Setwagonnoise" precondition="[self.oclIsKindOf(train::Accessories)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setwagonnoise()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		  
-		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditMotionSpeed" inputLabelExpression="feature:speed">
-		              <mask mask="{0}"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="speed" valueExpression="var:arg0"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionFasterAction" label="Faster" precondition="[self.oclIsKindOf(train::Motion)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).faster()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionSlowerAction" label="Slower" precondition="[self.oclIsKindOf(train::Motion)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).slower()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionReverseAction" label="Reverse" precondition="[self.oclIsKindOf(train::Motion)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).reverse()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionStopAction" label="Stop" precondition="[self.oclIsKindOf(train::Motion)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).stop()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionSetspeedAction" label="Setspeed" precondition="[self.oclIsKindOf(train::Motion)/]">
-		              <view name="views"/>
-		              <initialOperation>
-		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).setspeed()/]"/>
-		              </initialOperation>
-		            </ownedTools>
-		  
 		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditTrainId" inputLabelExpression="feature:id">
 		              <mask mask="{0}"/>
 		              <initialOperation>
@@ -355,6 +269,92 @@
 		              <mask mask="{0}"/>
 		              <initialOperation>
 		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="port" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		  
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditMotionSpeed" inputLabelExpression="feature:speed">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="speed" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionFasterAction" label="Faster" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).faster()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionSlowerAction" label="Slower" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).slower()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionReverseAction" label="Reverse" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).reverse()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionStopAction" label="Stop" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).stop()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="MotionSetspeedAction" label="Setspeed" precondition="[self.oclIsKindOf(train::Motion)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Motion).setspeed()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		  
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesKlaxon" inputLabelExpression="feature:klaxon">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="klaxon" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesLight" inputLabelExpression="feature:light">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="light" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesTrainNoise" inputLabelExpression="feature:trainNoise">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="trainNoise" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool:DirectEditLabel" name="EditAccessoriesWagonNoise" inputLabelExpression="feature:wagonNoise">
+		              <mask mask="{0}"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:SetValue" featureName="wagonNoise" valueExpression="var:arg0"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetKlaxonAction" label="SetKlaxon" precondition="[self.oclIsKindOf(train::Accessories)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setklaxon()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetlightAction" label="Setlight" precondition="[self.oclIsKindOf(train::Accessories)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setlight()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSettrainnoiseAction" label="Settrainnoise" precondition="[self.oclIsKindOf(train::Accessories)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).settrainnoise()/]"/>
+		              </initialOperation>
+		            </ownedTools>
+		            <ownedTools xsi:type="tool_1:OperationAction" name="AccessoriesSetwagonnoiseAction" label="Setwagonnoise" precondition="[self.oclIsKindOf(train::Accessories)/]">
+		              <view name="views"/>
+		              <initialOperation>
+		                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.oclAsType(train::Accessories).setwagonnoise()/]"/>
 		              </initialOperation>
 		            </ownedTools>
 		  
