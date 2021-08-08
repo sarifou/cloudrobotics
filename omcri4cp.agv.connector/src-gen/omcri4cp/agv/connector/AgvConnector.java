@@ -18,6 +18,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import edu.wpi.rail.jrosbridge.Ros;
 import edu.wpi.rail.jrosbridge.Topic;
+import edu.wpi.rail.jrosbridge.messages.geometry.Point;
+import edu.wpi.rail.jrosbridge.messages.geometry.Pose2D;
+import edu.wpi.rail.jrosbridge.messages.geometry.Quaternion;
 import edu.wpi.rail.jrosbridge.messages.geometry.Twist;
 import edu.wpi.rail.jrosbridge.messages.geometry.Vector3;
 
@@ -38,16 +41,31 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	
 	private Ros ros ;
 	
-	private Topic drivePub ;
+	private Topic pubCmdVel ;
+	
+	private Topic pubPose ;
+	
+	private Topic pubGripperPose ;
+	
+	private Topic pubGripperState ;
 	
 	private Twist driveMessage ;
 	
-	private final String DRIVE_TOPIC = "tquad/drive";
+	private final String DRIVE_TOPIC = "tquad/cmd_vel";
+	
+	private final String POSE_TOPIC = "tquad/pose";
+	
+	private final String GRIPPER_TOPIC = "tquad/gripper_pose";
+	
+	private final String GRIPPER_STATE_TOPIC = "tquad/gripper_state";
 	
 	private final String DRIVE_MESSAGE_TYPE = "geometry_msgs/Twist";
 	
-	private Topic gripperPub ;
-
+	private final String POSE_MESSAGE_TYPE = "geometry_msgs/Pose2D";
+	
+	private final String GRIPPER_POSE_MSG_TYPE = "geometry_msgs/Point";
+	
+	private final String GRIPPER_STATE_MSG_TYPE = "std_msgs/Bool";
 	/**
 	 * Constructs a agv connector.
 	 */
@@ -63,7 +81,7 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	{
 		LOGGER.debug("occiCreate() called on " + this);
 		try {
-			this.ros = new Ros(ip, port);
+			this.ros = new Ros(this.getIp(), this.getPort());
 		}catch(Exception e) {
 			LOGGER.error("An error occurred");
 			LOGGER.error("Error --> : "+e);
@@ -96,16 +114,62 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 		LOGGER.debug("occiDelete() called on " + this);
 		// TODO: Implement this callback or remove this method.
 	}
+	/**
+	 * Implement OCCI action:
+     * - scheme: http://cristal.org/omcri4cp/agv/agv/action#
+     * - term: connect
+     * - title: 
+	 */
+	@Override
+	public void connect()
+	{
+		LOGGER.debug("Action connect() called on " + this);
+		try {
+			if(!ros.isConnected()) {
+				this.ros.connect();
+				this.setConnectionState(this.ros.isConnected());
+				if(this.connectionState) {
+					LOGGER.info("Connection successful");
+				}
+			}
+		}catch(Exception e) {
+			LOGGER.error("An occurred");
+			LOGGER.error("error --> : "+e);
+		}
+	}
+	/**
+	 * Implement OCCI action:
+     * - scheme: http://cristal.org/omcri4cp/agv/agv/action#
+     * - term: disconnect
+     * - title: 
+	 */
+	@Override
+	public void disconnect()
+	{
+		LOGGER.debug("Action disconnect() called on " + this);
+		try {
+			if(this.connectionState) {
+				this.ros.disconnect();
+				this.setConnectionState(this.ros.isConnected());
+				if(!this.connectionState) {
+					LOGGER.info("Disconnection successful");
+				}
+			}
+		}catch(Exception e) {
+			LOGGER.error("An occurred");
+			LOGGER.error("error --> : "+e);
+		}
+	}
 	/*
 	 * 
 	 */
 	public void driver_publisher(Vector3 linear, Vector3 angular) {
 		try {
-			this.drivePub = new Topic (this.ros, this.DRIVE_TOPIC, this.DRIVE_MESSAGE_TYPE);
+			this.pubCmdVel = new Topic (this.ros, this.DRIVE_TOPIC, this.DRIVE_MESSAGE_TYPE);
 			this.driveMessage = new Twist(linear, angular);
 			LOGGER.info("Message "+ this.driveMessage);
 			if(connectionState) {
-				this.drivePub.publish(this.driveMessage);
+				this.pubCmdVel.publish(this.driveMessage);
 			}
 		}catch(Exception e) {
 			LOGGER.error("An error occurred");
@@ -122,14 +186,10 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void forward()
 	{
 		LOGGER.debug("Action forward() called on " + this);
-		try {
-			Vector3 linear = new Vector3(0,speedLinear, 0);
-			Vector3 angular = new Vector3(0,0,0);
-			this.driver_publisher(linear, angular);
-		}catch(Exception e) {
-			LOGGER.error("An error occurred");
-			LOGGER.error("Error --> : "+e);
-		}
+		Vector3 linear = new Vector3(this.getSpeedLinear(),0, 0);
+		Vector3 angular = new Vector3(0,0,0);
+		this.driver_publisher(linear, angular);
+
 	}
 	/**
 	 * Implement OCCI action:
@@ -141,14 +201,9 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void backward()
 	{
 		LOGGER.debug("Action backward() called on " + this);
-		try {
-			Vector3 linear = new Vector3(0,-speedLinear, 0);
-			Vector3 angular = new Vector3(0,0,0);
-			this.driver_publisher(linear, angular);
-		}catch(Exception e) {
-			LOGGER.error("An error occurred");
-			LOGGER.error("Error --> : "+e);
-		}
+		Vector3 linear = new Vector3(-this.getSpeedLinear(),0, 0);
+		Vector3 angular = new Vector3(0,0,0);
+		this.driver_publisher(linear, angular);
 	}
 	/**
 	 * Implement OCCI action:
@@ -160,7 +215,7 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void right()
 	{
 		LOGGER.debug("Action right() called on " + this);
-		Vector3 linear = new Vector3(speedLinear,0, 0);
+		Vector3 linear = new Vector3(0, -this.getSpeedLinear(), 0);
 		Vector3 angular = new Vector3(0,0,0);
 		this.driver_publisher(linear, angular);
 	}
@@ -174,7 +229,7 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void left()
 	{
 		LOGGER.debug("Action left() called on " + this);
-		Vector3 linear = new Vector3(-speedLinear,0, 0);
+		Vector3 linear = new Vector3(0, this.getSpeedLinear(), 0);
 		Vector3 angular = new Vector3(0,0,0);
 		this.driver_publisher(linear, angular);
 	}
@@ -188,21 +243,27 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void right_bottom()
 	{
 		LOGGER.debug("Action right_bottom() called on " + this);
-
-		// TODO: Implement how to right_bottom this agv.
+		double vx = -speedLinear*Math.cos((Math.PI)/4);
+		double vy = -speedLinear*Math.sin((Math.PI)/4) ;
+		Vector3 linear = new Vector3(vx,vy, 0);
+		Vector3 angular = new Vector3(0,0,0);
+		this.driver_publisher(linear, angular); 
 	}
 	/**
 	 * Implement OCCI action:
      * - scheme: http://cristal.org/omcri4cp/agv/agv/action#
      * - term: right_up
      * - title: 
-	 */
+	 */  
 	@Override
 	public void right_up()
 	{
 		LOGGER.debug("Action right_up() called on " + this);
-
-		// TODO: Implement how to right_up this agv.
+		double vx = speedLinear*Math.cos((Math.PI)/4);
+		double vy = -speedLinear*Math.sin((Math.PI)/4) ;
+		Vector3 linear = new Vector3(vx,vy, 0);
+		Vector3 angular = new Vector3(0,0,0);
+		this.driver_publisher(linear, angular); 
 	}
 	/**
 	 * Implement OCCI action:
@@ -214,8 +275,27 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void left_up()
 	{
 		LOGGER.debug("Action left_up() called on " + this);
-
-		// TODO: Implement how to left_up this agv.
+		double vx = speedLinear*Math.cos((Math.PI)/4);
+		double vy = speedLinear*Math.sin((Math.PI)/4) ;
+		Vector3 linear = new Vector3(vx,vy, 0);
+		Vector3 angular = new Vector3(0,0,0);
+		this.driver_publisher(linear, angular); 
+	}
+	/**
+	 * Implement OCCI action:
+     * - scheme: http://cristal.org/omcri4cp/agv/agv/action#
+     * - term: left_bottom
+     * - title: 
+	 */
+	@Override
+	public void left_bottom()
+	{
+		LOGGER.debug("Action left_bottom() called on " + this);
+		double vx = -speedLinear*Math.cos((Math.PI)/4);
+		double vy =  speedLinear*Math.sin((Math.PI)/4) ;
+		Vector3 linear = new Vector3(vx,vy, 0);
+		Vector3 angular = new Vector3(0,0,0);
+		this.driver_publisher(linear, angular); 
 	}
 	/**
 	 * Implement OCCI action:
@@ -227,8 +307,9 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void stop()
 	{
 		LOGGER.debug("Action stop() called on " + this);
-
-		// TODO: Implement how to stop this agv.
+		Vector3 linear = new Vector3(0,0,0);
+		Vector3 angular = new Vector3(0,0,0);
+		this.driver_publisher(linear, angular);
 	}
 
 	/**
@@ -247,40 +328,6 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	/**
 	 * Implement OCCI action:
      * - scheme: http://cristal.org/omcri4cp/agv/agv/action#
-     * - term: connect
-     * - title: 
-	 */
-	@Override
-	public void connect()
-	{
-		LOGGER.debug("Action connect() called on " + this);
-		try {
-			this.ros.connect();
-			connectionState = this.ros.isConnected();
-			if(connectionState) {
-				LOGGER.info("Connection successful");
-			}
-		}catch(Exception e) {
-			LOGGER.error("An occurred");
-			LOGGER.error("error --> : "+e);
-		}
-	}
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/agv/action#
-     * - term: left_bottom
-     * - title: 
-	 */
-	@Override
-	public void left_bottom()
-	{
-		LOGGER.debug("Action left_bottom() called on " + this);
-
-		// TODO: Implement how to left_bottom this agv.
-	}
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/agv/action#
      * - term: open_gripper
      * - title: 
 	 */
@@ -288,8 +335,11 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void open_gripper()
 	{
 		LOGGER.debug("Action open_gripper() called on " + this);
-
-		// TODO: Implement how to open_gripper this agv.
+		try {
+			
+		}catch(Exception e) {
+			
+		}
 	}
 	/**
 	 * Implement OCCI action:
@@ -303,19 +353,6 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 		LOGGER.debug("Action get_line_sensors() called on " + this);
 
 		// TODO: Implement how to get_line_sensors this agv.
-	}
-	/**
-	 * Implement OCCI action:
-     * - scheme: http://cristal.org/omcri4cp/agv/agv/action#
-     * - term: disconnect
-     * - title: 
-	 */
-	@Override
-	public void disconnect()
-	{
-		LOGGER.debug("Action disconnect() called on " + this);
-
-		// TODO: Implement how to disconnect this agv.
 	}
 	/**
 	 * Implement OCCI action:
@@ -353,8 +390,16 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void go_to_position()
 	{
 		LOGGER.debug("Action go_to_position() called on " + this);
-
-		// TODO: Implement how to go_to_position this agv.
+		try {
+			this.pubPose = new Topic (this.ros, this.POSE_TOPIC, this.POSE_MESSAGE_TYPE);
+			Pose2D pose = new Pose2D(poseX, poseY, poseAngular);
+			if(connectionState) {
+				pubPose.publish(pose);
+			}
+		} catch(Exception e) {
+			LOGGER.error("An error occurred");
+			LOGGER.error("Error --> : "+e);
+		}
 	}
 	/**
 	 * Implement OCCI action:
