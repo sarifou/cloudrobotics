@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="drone" scheme="http://cristal.org/omcri4cp/drone#">
+  <import href="http://schemas.ogf.org/occi/core#/"/>
+  <kinds name="Drone" scheme="http://cristal.org/omcri4cp/drone#">
+    <attributes name="user" mutable="true" required="true" default="root">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </attributes>
+    <attributes name="ip" mutable="true" required="true" default="127.0.0.1">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </attributes>
+    <attributes name="port" mutable="true" required="true" default="9090">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="connection.state" mutable="true">
+      <type xsi:type="occi:BooleanType" href="http://schemas.ogf.org/occi/core#//@types.1"/>
+    </attributes>
+    <attributes name="drone.mode" mutable="true">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </attributes>
+    <attributes name="drone.battery" mutable="true">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </attributes>
+    <attributes name="pose.linear.x" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="pose.linear.y" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="pose.linear.z" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="pose.angular" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="speed.linear" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="speed.angular" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="drone.id" mutable="true">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </attributes>
+    <actions name="forward" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="backward" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="left" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="right" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="up" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="down" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="set_speed" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="stop" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="go_to_position" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="turn_left" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="turn_right" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="change_mode" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="arm" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <actions name="disarm" scheme="http://cristal.org/omcri4cp/drone/drone/action#"/>
+    <parent href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+  </kinds>
+</occi:Extension>

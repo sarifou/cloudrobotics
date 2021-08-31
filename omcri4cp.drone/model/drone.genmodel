@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2015-2017 Obeo, Inria&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#x9;&#xA;Contributors:&#xA;- William Piers &lt;william.piers@obeo.fr>&#xA;- Philippe Merle &lt;philippe.merle@inria.fr>&#xA;- Faiez Zalila &lt;faiez.zalila@inria.fr>" modelDirectory="/omcri4cp.drone/src-gen" editDirectory="/omcri4cp.drone.edit/src-gen" editorDirectory="/omcri4cp.drone.editor/src-gen" modelPluginID="omcri4cp.drone" modelName="Drone" testsDirectory="/omcri4cp.drone.tests/src" complianceLevel="8.0" copyrightFields="false" editPluginID="omcri4cp.drone.edit" editorPluginID="omcri4cp.drone.editor" testsPluginID="omcri4cp.drone.tests" operationReflection="true">
+  <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
+    <details key="Use Delegates" value="false"/>
+  </genAnnotations>
+  <foreignModel>drone.ecore</foreignModel>
+  <genPackages prefix="Drone" basePackage="omcri4cp" disposableProviderFactory="true">
+    <ecorePackage href="drone.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="drone.ecore#//Drone"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/user"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/ip"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/port"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/connectionState"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/droneMode"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/droneBattery"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/poseLinearX"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/poseLinearY"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/poseLinearZ"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/poseAngular"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/speedLinear"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/speedAngular"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="drone.ecore#//Drone/droneId"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/forward"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/backward"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/left"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/right"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/up"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/down"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/set_speed"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/stop"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/go_to_position"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/turn_left"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/turn_right"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/change_mode"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/arm"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="drone.ecore#//Drone/disarm"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel#//occi"/>
+</genmodel:GenModel>

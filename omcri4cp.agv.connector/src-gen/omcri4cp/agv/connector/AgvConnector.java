@@ -364,8 +364,9 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void turn_left()
 	{
 		LOGGER.debug("Action turn_left() called on " + this);
-
-		// TODO: Implement how to turn_left this agv.
+		Vector3 linear = new Vector3(0,0,0);
+		Vector3 angular = new Vector3(0,0, this.getSpeedAngular());
+		this.driver_publisher(linear, angular);
 	}
 	/**
 	 * Implement OCCI action:
@@ -377,7 +378,9 @@ public class AgvConnector extends omcri4cp.agv.impl.AgvImpl
 	public void turn_right()
 	{
 		LOGGER.debug("Action turn_right() called on " + this);
-
+		Vector3 linear = new Vector3(0,0,0);
+		Vector3 angular = new Vector3(0,0, -this.getSpeedAngular());
+		this.driver_publisher(linear, angular);
 		// TODO: Implement how to turn_right this agv.
 	}
 	/**

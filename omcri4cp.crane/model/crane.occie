@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<occi:Extension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:occi="http://schemas.ogf.org/occi/core/ecore" name="crane" scheme="http://cristal.org/omcri4cp/crane#">
+  <import href="http://schemas.ogf.org/occi/core#/"/>
+  <kinds name="Crane" scheme="http://cristal.org/omcri4cp/crane#">
+    <attributes name="user" mutable="true" required="true" default="root">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </attributes>
+    <attributes name="ip" mutable="true" required="true" default="127.0.0.1">
+      <type xsi:type="occi:StringType" href="http://schemas.ogf.org/occi/core#//@types.0"/>
+    </attributes>
+    <attributes name="port" mutable="true" required="true" default="9090">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="connection.state" mutable="true" default="false">
+      <type xsi:type="occi:BooleanType" href="http://schemas.ogf.org/occi/core#//@types.1"/>
+    </attributes>
+    <attributes name="pose.x" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="pose.y" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="pose.z" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="speed" mutable="true" default="0">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <attributes name="battery" mutable="true">
+      <type xsi:type="occi:NumericType" href="http://schemas.ogf.org/occi/core#//@types.2"/>
+    </attributes>
+    <actions name="connect" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="disconnect" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="go_to_position" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="get_battery" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="up" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="down" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="chassis_forward" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="chassis_backward" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="spreader_forward" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="spreader_backward" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <actions name="stop" scheme="http://cristal.org/omcri4cp/crane/crane/action#"/>
+    <parent href="http://schemas.ogf.org/occi/core#//@kinds[term='resource']"/>
+  </kinds>
+</occi:Extension>

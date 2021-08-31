@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2015-2017 Obeo, Inria&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#x9;&#xA;Contributors:&#xA;- William Piers &lt;william.piers@obeo.fr>&#xA;- Philippe Merle &lt;philippe.merle@inria.fr>&#xA;- Faiez Zalila &lt;faiez.zalila@inria.fr>" modelDirectory="/omcri4cp.train/src-gen" editDirectory="/omcri4cp.train.edit/src-gen" editorDirectory="/omcri4cp.train.editor/src-gen" modelPluginID="omcri4cp.train" modelName="Train" testsDirectory="/omcri4cp.train.tests/src" complianceLevel="8.0" copyrightFields="false" editPluginID="omcri4cp.train.edit" editorPluginID="omcri4cp.train.editor" testsPluginID="omcri4cp.train.tests" operationReflection="true">
+  <genAnnotations source="http://www.eclipse.org/OCL/GenModel">
+    <details key="Use Delegates" value="false"/>
+  </genAnnotations>
+  <foreignModel>train.ecore</foreignModel>
+  <genPackages prefix="Train" basePackage="omcri4cp" disposableProviderFactory="true">
+    <ecorePackage href="train.ecore#/"/>
+    <genClasses>
+      <ecoreClass href="train.ecore#//Train"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/user"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/ip"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/port"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/lightState"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/honkState"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/wagonNoise"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/trainName"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/trainNoise"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/trainNumber"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/connectionState"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="train.ecore#//Train/trainSpeed"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/faster"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/slower"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/reverse"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/setspeed"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/stop"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/set_honk"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/set_wagon_noise"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/set_train_noise"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/set_light"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/connect"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="train.ecore#//Train/disconnect"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="platform:/plugin/org.eclipse.cmf.occi.core/model/OCCI.genmodel#//occi"/>
+</genmodel:GenModel>
